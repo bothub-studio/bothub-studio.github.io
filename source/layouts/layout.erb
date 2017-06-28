@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="BotHub.Studio">
+    <meta name="description" content="Build a serverless chatbot on BotHub.Studio. We provide a robust backend system for deploy, run and manage a chatbot.">
+    <meta name="robots" content="index,follow,noodp">
+    <meta name="googlebot" content="index,follow">
+    <meta name="subject" content="Build a serverless chatbot on BotHub.Studio. We provide a robust backend system for deploy, run and manage a chatbot.">
+    <meta name="rating" content="General">
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title><%= current_page.data.title || "Middleman" %></title>
+    <%= stylesheet_link_tag "site" %>
+    <%= javascript_include_tag "site" %>
+  </head>
+  <body>
+    <div id="app">
+      <header class="<% if current_page.data.isFront %>front<% end %> site">
+        <div class="container">
+          <nav class="site">
+            <input class="trigger" type="checkbox" id="mainNavButton">
+            <label class="trigger-icon" for="mainNavButton" onclick>Menu <i class="fa trigger-indicator"></i></label>
+            <a class="navbar-brand" href="/">
+              BotHub<em>.</em>Studio<sup><em>beta</em></sup>
+            </a>
+            <ul class="menu">
+              <li><%= link_to 'Docs', '/docs.html' %></li>
+              <li><a href="/store">Store</a></li>
+              <li><a to="#" class="disabled" >Community</a></li>
+            </ul>
+            <div>
+              <a href="https://app.bothub.studio/login" class="btn btn-signin">Sign in</a>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <%= yield %>
+      <footer class="<% if current_page.data.isFront %>front<% end %> site">
+        <section>
+          <div>
+            <ul class="horizontal-menu">
+              <li><a href="/docs">Documentation</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div>
+            <ul>
+              <li>&copy; 2017 BotHub.Studio</li>
+              <li><a href="emailto:bothub@bothub.studio">bothub@bothub.studio</a></li>
+              <li><em>This service is currently in beta.</em></li>
+            </ul>
+          </div>
+        </section>
+      </footer>
+    </div>
+  </body>
+</html>

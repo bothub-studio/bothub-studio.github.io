@@ -1,0 +1,420 @@
+/* app */
+
+@import url("//fonts.googleapis.com/css?family=Ubuntu:400,500");
+
+.base-font {
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+}
+
+body,
+select,
+input,
+label {
+  @extend .base-font;
+  line-height: 1.5;
+  color: $color-black;
+}
+a.link-danger {
+  color: $color-red !important;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  @extend %colorset-skyblue-inherit;
+}
+ul {
+  @extend %ul-no-symbol;
+}
+main:not(.front) {
+  @extend %colorset-gray2-inherit;
+}
+.sans-font {
+  font-family: "Ubuntu", sans-serif;
+}
+h1, h2, h3, h4, h5 {
+  @extend .sans-font
+}
+.sr-only { display: none }
+body > div[id=app] > header {
+  background-color: $color-dark-sky-blue;
+  @extend .sans-font;
+}
+body > div[id=app] > header.front {
+  background-color: $main-dark-background-color;
+  @extend .sans-font;
+}
+nav.site,
+nav.site a,
+nav.site label {
+  color: $navbar-text-color;
+}
+nav.site a:hover {
+  color: $site-color-2;
+  @extend %transition;
+}
+nav.site .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  sup {
+    font-size: 0.8rem;
+  }
+  em {
+    color: $color-tomato;
+  }
+}
+nav.site > ul > li {
+  a {
+    font-size: 1.3rem;
+    text-decoration: none;
+  }
+  a:hover {
+    @extend %transition;
+  }
+}
+nav.site > form a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+nav.site .btn-signin {
+  font-size: 1.3rem;
+  @extend %colorset-skyblue-inherit;
+  border: 1px solid $site-color-2;
+  @include border-radius(0.3rem);
+}
+nav.site .btn-signin:hover {
+  @extend %colorset-white-skyblue;
+  @extend %transition;
+}
+@media #{$mobile-and-tablet} {
+  nav.site input.trigger {
+    & ~ label.trigger-icon .trigger-indicator:after {
+      content: ' \f105';
+    }
+    &:checked ~ label.trigger-icon .trigger-indicator:after {
+      content: ' \f107';
+    }
+  }
+  nav.site .btn {
+    border: 0;
+    background-color: inherit;
+    &:hover {
+      background-color: inherit;
+    }
+  }
+  nav.site a:not(.navbar-brand) {
+    display: inline-block;
+    width: 100%;
+  }
+}
+footer.site > section {
+  border-top: 1px solid $color-gray;
+}
+footer:not(.front) a {
+  @extend %colorset-gray2-inherit;
+}
+footer.front,
+footer.front * {
+  @extend %colorset-site-color-1-reverse;
+}
+ul.horizontal-menu {
+  li { display: inline; }
+  li:after { content: " \00b7 "; }
+  li:last-child:after { content: ""; }
+  font-size: 1.3rem;
+  @extend .sans-font;
+}
+article.front-promo {
+  font-size: 1.3rem;
+
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+article.front-promo section.promo-console {
+  @extend %colorset-site-color-1;
+  em {
+    color: $site-color-2;
+    font-style: normal;
+  }
+}
+article.front-promo section.what-you-gets {
+  h3 {
+    font-size: 1.5rem;
+  }
+  h3.feature-icon {
+    font-size: 4rem;
+    margin: 1rem 0;
+  }
+  p {
+    font-size: 1rem;
+  }
+}
+article.front-promo section.code-example {
+  @extend %colorset-site-color-1;
+}
+article.front-promo section.pricing-plans {
+  background-color: $site-color-2;
+
+  .price {
+    @extend %ul-no-symbol;
+    li {
+      background-color: $main-light-background-color;
+      border-bottom: 1px solid $site-color-3;
+    }
+    li.header {
+      font-weight: bold;
+      @extend .sans-font;
+      border-bottom: 1px solid $site-color-4;
+      @include set-fg-bg-color($site-color-2, $site-color-3);
+      @include border-radius-top(1rem);
+    }
+    li.footer {
+      font-weight: bold;
+      @include border-radius-bottom(1rem);
+    }
+  }
+}
+article.front-promo section.channels {
+  img { width: 86px; }
+}
+img.disabled {
+  @extend %grayscale;
+}
+.form-group label.icon-label {
+  background-color: $site-color-3;
+  border: 1px solid $site-color-4;
+  @include border-radius-left(0.25rem);
+}
+.form-group input {
+  font-size: 1rem;
+  border: 1px solid $site-color-4;
+  @include border-radius-right(0.25rem);
+}
+.form-general input,
+.form-general select {
+  font-size: 1rem;
+  border: 1px solid $site-color-4;
+  @include border-radius(0.25rem);
+}
+.form-general label {
+  font-weight: bold;
+}
+.btn,
+.btn-default {
+  font-size: 1rem;
+  background-color: $site-color-2;
+  color: $color-white;
+  border: 0;
+  @include border-radius(0.25rem);
+}
+.btn:hover,
+.btn-default:hover {
+  background-color: $site-color-5;
+  color: $color-white;
+  border: 0;
+  @include border-radius(0.25rem);
+  @extend %transition;
+}
+.btn-null {
+  background-color: inherit;
+  border: 0;
+  padding: 0;
+}
+.btn-danger {
+  background-color: $color-tomato;
+}
+.btn-danger:hover {
+  background-color: $color-red;
+}
+.btn-cta {
+  @extend .sans-font;
+  @extend button;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin: 2rem;
+  padding: 1rem;
+}
+h1.cta {
+  font-size: 2.5rem;
+}
+hr {
+  border: 0;
+  border-top: 1px solid $site-color-4;
+}
+.alert {
+  padding: 1rem;
+  @include border-radius(0.25rem);
+  border: 1px solid;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebcccc;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bcdff1;
+}
+.usermenu .dropdown {
+  background-color: $color-white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  color: $color-black;
+  border: 1px solid $color-gray;
+  @include border-radius(0.1rem);
+  text-align: center;
+  margin: 0;
+}
+.usermenu:hover .dropdown a {
+  color: $color-black;
+}
+.dropdown li.danger {
+  @extend %colorset-red-inherit;
+  border-top: 1px solid $color-gray;
+}
+a.disabled {
+  color: $color-dark-gray !important;
+  pointer-events: none;
+}
+blockquote.code {
+  font-family: monospace;
+  background-color: $color-light-gray;
+  padding: 1rem;
+  overflow: auto;
+}
+table.project-list {
+  border-collapse: collapse;
+  color: $color-light-gray2;
+  box-shadow: 0 0 0 2px $color-light-gray3;
+  th, tr:not(:last-child) td {
+    border-bottom: 2px solid $color-light-gray3;
+  }
+  thead tr {
+    background-color: $color-light-gray0;
+  }
+}
+table.project-list {
+  th,
+  td:not(:last-child) {
+    text-align: left;
+  }
+  td:last-child {
+    text-align: right;
+  }
+  td:first-child {
+    @extend .sans-font;
+    span.project-name {
+      @extend %colorset-skyblue-inherit;
+      font-weight: 500;
+    }
+    span.project-summary {
+      font-size: 0.8rem;
+    }
+  }
+}
+table.project-list img.channel-image {
+  width: 24px;
+}
+.dropdown-more {
+  @extend %colorset-skyblue-inherit;
+}
+article.store div.project {
+  @include border-radius(0.2rem);
+  border: 1px solid $site-color-2;
+  @extend %card;
+}
+article.store .project-desc h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+aside.toc ul {
+  @extend %ul-no-symbol;
+  li {
+    margin-bottom: 1.2rem;
+  }
+}
+aside.toc a {
+  color: $site-color-1;
+}
+aside.toc a:hover {
+  color: $site-color-2;
+}
+section.create-project {
+  min-height: 70vh;
+}
+.project-property-menu {
+  padding: 1rem;
+  @extend %colorset-light-black-white;
+  @extend %card;
+}
+.project-icon {
+  font-size: 2rem;
+  color: $color-sky-blue;
+}
+code.inline {
+  @extend %colorset-dark-red-light-gray;
+  @include border-radius(0.25rem);
+}
+section.code-example pre {
+  @extend %card;
+  code {
+    font-size: 1rem;
+  }
+}
+p.note {
+  font-size: 0.9rem;
+  color: $color-dark-gray;
+}
+.channel-management img.logo {
+  width: 36px;
+}
+section.channel-management .project-channel {
+  @extend %card;
+}
+section.channel-management .fa-toggle:after {
+  content: ' \f105';
+}
+section.channel-management .open .fa-toggle:after {
+  content: ' \f107';
+}
+section.project-management > header > h1 {
+  font-size: 1.5rem;
+}
+section.property-management .project-property-item label,
+section.property-management .project-property-item input {
+  font-size: 1rem;
+}
+section.property-management .project-property-item .project-property-key {
+  @media #{$mobile} {
+    @include border-radius-top(0.25rem);
+  }
+  @media #{$desktop-and-tablet} {
+    @include border-radius-left(0.25rem);
+  }
+  font-weight: 600;
+}
+section.property-management .project-property-item .project-property-value {
+  @media #{$mobile} {
+    @include border-radius-bottom(0.25rem);
+  }
+  @media #{$desktop-and-tablet} {
+    @include border-radius-right(0.25rem);
+  }
+}
+section.property-management .project-property-item input.project-property-key  {
+  border: 1px solid $color-gray;
+}
+section.property-management .project-property-item input.project-property-value {
+  border: 1px solid $color-gray;
+}
+li.project-property-item:hover .view .buttons {
+  visibility: visible;
+}
+.danger {
+  color: $color-tomato;
+}
+.approval {
+  color: $color-limegreen;
+}

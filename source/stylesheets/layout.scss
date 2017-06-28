@@ -1,0 +1,488 @@
+/* Layout */
+
+#app {
+  @include flex($flow: column);
+}
+
+header.site {
+  @media #{$mobile-and-tablet} {
+    padding: $promo-section-horizontal-margin;
+  }
+  @media #{$desktop} {
+    padding: $navbar-horizontal-margin;
+  }
+}
+.container {
+  @include container();
+}
+
+nav.site input.trigger {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+/* Nav */
+
+@media #{$mobile-and-tablet} {
+  nav.site label.trigger-icon {
+    float: right;
+    padding: 0.25rem;
+  }
+  nav.site input.trigger {
+    & ~ ul,
+    & ~ div {
+      display: none;
+    }
+    &:checked ~ ul,
+    &:checked ~ div {
+      display: block;
+    }
+  }
+  nav.site .btn {
+    padding: 0;
+  }
+}
+
+@media #{$desktop} {
+  nav.site {
+    @include flex($grow: 1, $justify-content: space-between, $align-items: center);
+    > *:nth-child(2) { flex-grow: 2; }
+    > *:last-child { text-align: right; }
+  }
+  nav.site {
+    form,
+    ul.menu,
+    ul.menu li { display: inline-block; }
+  }
+  nav.site > ul > li {
+    margin-right: 20px;
+  }
+  nav.site label.trigger-icon {
+    display: none;
+  }
+}
+
+/* Footer */
+footer.site > section {
+  @include container();
+  padding: $promo-section-horizontal-margin $promo-section-horizontal-margin;
+}
+
+footer.front > section {
+  padding: $promo-section-vertical-margin $promo-section-horizontal-margin;
+}
+
+@media #{$desktop} {
+  footer.site > section {
+    @include flex($grow: 2);
+    > *:last-child {
+      flex-grow: 1;
+      text-align: right;
+    }
+    ul { padding: 0; }
+  }
+}
+
+main > article {
+  min-height: 70vh;
+}
+article.front-promo > section > .container {
+  @include container();
+}
+article.front-promo > section {
+  padding: $promo-section-vertical-margin $promo-section-horizontal-margin;
+  text-align: center;
+  h2 { margin-bottom: $promo-section-vertical-margin; }
+}
+
+article.front-promo section.promo-console video {
+  @media #{$mobile-and-tablet} {
+    display: none;
+  }
+  @media #{$desktop} {
+    max-width: 800px;
+  }
+}
+
+article.front-promo section.what-you-gets .container {
+  > div:first-child {
+    @include flex($align-items: baseline, $grow: 1);
+  }
+}
+
+article.front-promo section.what-you-gets .features {
+  .feature-item {
+    display: inline-block;
+    width: 240px;
+    margin: 0 20px 20px 20px;
+  }
+}
+
+article.front-promo section.pricing-plans {
+  .price {
+    padding: 0;
+    display: inline-block;
+
+    li {
+      padding: 1rem 0;
+    }
+  }
+}
+
+article.front-promo section.pricing-plans .price {
+  @media #{$mobile-and-tablet} {
+    width: 90%;
+  }
+}
+
+@media #{$desktop} {
+  article.front-promo section.what-you-gets .features {
+    @include flex($wrap: wrap, $justify-content: center);
+  }
+  article.front-promo section.pricing-plans {
+    .container > div {
+      @include flex($wrap: wrap, $justify-content: center);
+    }
+    .price {
+      margin: 0 3rem;
+      width: 25rem;
+    }
+  }
+  article.front-promo section.code-example .container {
+    @include flex($grow: 1, $basis: 0);
+  }
+}
+
+article.front-promo section.channels {
+  ul { text-align: center; }
+  li {
+    display: inline-block;
+    margin: 1rem;
+  }
+}
+section.docs h1 {
+  padding-bottom: 1rem;
+}
+div.form {
+  margin-bottom: 20px;
+}
+.form-group {
+  margin: 15px 0;
+  display: flex;
+}
+.form-group label.icon-label {
+  padding: 0.5rem;
+  width: 2.5rem;
+  display: inline-block;
+  text-align: center;
+}
+.form-group input {
+  width: 100%;
+  margin-left: -1px;
+  padding: 0.5rem;
+}
+.form-article {
+  max-width: 450px;
+  margin: 30px auto;
+  padding: 0 20px;
+
+  h1 {
+    padding-bottom: $promo-section-horizontal-margin;
+    border-bottom: 1px solid $site-color-4;
+  }
+}
+fieldset {
+  min-width: 311px;
+}
+button,
+.btn {
+  padding: 0.6rem 0.8rem;
+}
+.btn-full {
+  font-size: 1rem;
+  padding: 0.8rem;
+  width: 100%;
+}
+.alert {
+  margin: 20px 0;
+}
+.usermenu {
+  position: relative;
+  @include flex($justify-content: space-between, $align-items: baseline);
+}
+img.store {
+  width: 65px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+.dropdown-container {
+  position: relative;
+}
+.dropdown-container .dropdown {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  width: 200px;
+  padding: 0;
+  z-index: 1;
+  right: 0;
+  text-align: center;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+.dropdown-anchor:focus ~ .dropdown {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0.5s, opacity 0.5s;
+}
+.dropdown li {
+  display: inline-block;
+  width: 100%;
+}
+.dropdown li a {
+  display: inline-block;
+  width: 100%;
+  padding: 0.5rem;
+}
+.project-desc p {
+  margin: 0;
+}
+.project-action {
+  clear: both;
+  padding-top: 15px;
+  border-top: 1px solid $site-color-4;
+  @include flex($flow:row-reverse);
+}
+section.docs h1 {
+  padding-bottom: 1rem;
+}
+section.docs h2 {
+  border-left: 0.5rem solid $site-color-2;
+  padding-left: 0.5rem;
+  margin-top: 2rem;
+}
+section.docs {
+  margin-bottom: 1.5rem;
+  @media #{$mobile-and-tablet} {
+    padding: 1rem $promo-section-horizontal-margin;
+  }
+  @media #{$desktop} {
+    @include flex($flow:row-reverse);
+    @include padding-main-content-area();
+  }
+}
+section.docs aside.toc {
+  @media #{$mobile-and-tablet} {
+    display: none;
+  }
+  @media #{$desktop} {
+    flex-basis: 15rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-right: 2rem;
+    border-right: 1px solid $site-color-4;
+  }
+}
+section.project-list {
+  @include padding-main-content-area();
+}
+article.store div.project {
+  display: inline-block;
+  width: 340px;
+  margin: 10px;
+  padding: 20px;
+}
+table.project-list {
+  @media #{$mobile-and-tablet} {
+    width: 100%;
+  }
+  @media #{$desktop} {
+    width: 80%;
+  }
+  td {
+    padding: 1rem;
+  }
+  th {
+    padding: 0.2rem 1rem;
+  }
+  @media #{$mobile} {
+    td.channel,
+    th.channel {
+      display: none;
+    }
+  }
+}
+table.analytics {
+  width: 100%;
+
+  thead th {
+    border-bottom: 1px solid $site-color-4;
+    padding: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+  .date { text-align: center; }
+  .value { text-align: right; }
+}
+section.project-list {
+  min-height: 70vh;
+  @include flex($justify-content: center);
+}
+.project-icon {
+  @media #{$mobile} {
+    display: none;
+  }
+  @media #{$desktop} {
+    display: inline-block;
+    float: left;
+    margin-right: 1rem;
+  }
+}
+.form-general input,
+.form-general select {
+  padding: 0.5rem;
+  width: 100%;
+}
+.form-general label {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.form-button-group {
+  margin-top: 2rem;
+}
+code {
+  padding: 0.2rem;
+}
+section.code-example pre {
+  @media #{$desktop-and-tablet} {
+    margin-right: 3rem;
+  }
+  code {
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+  }
+}
+section.code-example div.code {
+  padding: 1rem;
+}
+section.code-example .code-description {
+  text-align: left;
+}
+section.project-management {
+  @include container(600px);
+  @include padding-main-content-area();
+}
+section.channel-management .project-channel {
+  margin-bottom: 1rem;
+}
+section.channel-management .project-channel > * {
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  overflow: hidden;
+}
+section.channel-management .project-channel-detail {
+  padding: 0 1rem 1rem 1rem;
+}
+section.channel-management .project-channel-summary {
+  @include flex($flow:row, $grow: 1, $align-items: center);
+}
+section.channel-management .project-channel-detail {
+  display: none;
+}
+section.channel-management .open .project-channel-detail {
+  display: block;
+}
+section.channel-management .project-channel-summary > * {
+  display: inline-block;
+}
+section.channel-management .project-channel-summary > .logo {
+  margin-right: 1rem;
+  flex-basis: 50px;
+  flex-grow: 0;
+}
+section.channel-management .project-channel-summary > .name {
+  font-size: 1.3rem;
+  width: 150px;
+}
+section.channel-management .project-channel-summary > .buttons {
+  text-align: right;
+}
+section.project-management > header {
+  @include flex($grow: 1, $align-items: center);
+  border-bottom: 1px solid $color-light-gray3;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.channel-icon {
+  display: inline-block;
+  margin-right: 5px;
+}
+section.property-management .project-property-item {
+  .view, .edit {
+    @include flex($grow: 3, $basis: 0);
+    > .buttons {
+      flex-grow: 0;
+      flex-basis: 4rem;
+    }
+  }
+  .new {
+    @media #{$mobile} {
+      @include flex($flow: column);
+      padding: $promo-section-horizontal-margin;
+    }
+    @media #{$desktop-and-tablet} {
+      @include flex($grow: 3, $basis: 0);
+      > .buttons {
+        flex-grow: 0;
+        flex-basis: 4rem;
+      }
+    }
+  }
+  .edit {
+    display: none;
+  }
+  .view {
+    display: flex;
+    .buttons {
+      visibility: hidden;
+    }
+    &:hover .buttons {
+      visibility: visible;
+    }
+  }
+}
+section.property-management .project-property-item label,
+section.property-management .project-property-item input {
+  padding: 0.5rem;
+}
+section.property-management .project-property-item .project-property-key {
+  flex-grow: 2;
+}
+section.property-management .project-property-item .project-property-value {
+  @media #{$mobile} {
+    margin-top: -1px;
+    margin-bottom: 1rem;
+  }
+  @media #{$desktop-and-tablet} {
+    margin-left: -1px;
+  }
+}
+section.property-management .project-property-item .buttons {
+  @include flex($align-items: center, $justify-content: center);
+  @media #{$mobile} {
+    .btn {
+      width: 100%;
+    }
+  }
+}
+section.property-management .editing {
+  .edit {
+    display: flex;
+  }
+  .view {
+    display: none;
+  }
+}

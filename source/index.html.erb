@@ -1,0 +1,140 @@
+---
+title: Welcome to BotHub.Studio
+isFront: true
+---
+
+<article class="front-promo">
+  <!-- Section: Console -->
+  <section class="promo-console">
+    <div class="container">
+      <h2>Deploy your <em>chatbot</em> with ease</h2>
+      <video autoplay loop>
+        <source src="http://d3q6dk6wplpy9l.cloudfront.net/media/tty.mp4"
+                type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Section: What you gets -->
+  <section class="what-you-gets">
+    <div class="container">
+      <div>
+        <div><hr/></div>
+        <h2>What you gets...</h2>
+        <div><hr/></div>
+      </div>
+      <div class="features">
+        <div class="feature-item">
+          <h3 class="feature-icon"><i class="fa fa-pencil" aria-hidden="true"></i></h3>
+          <h3>Take Your Code</h3>
+          <p>Write code, keep it yours.<br/>
+            The core of the code should always be yours.</p>
+        </div>
+        <div class="feature-item">
+          <h3 class="feature-icon"><i class="fa fa-gears" aria-hidden="true"></i></h3>
+          <h3>Backend Free</h3>
+          <p>You build bot, we build backend.<br/>
+            You need a robust backend as bot grows.</p>
+        </div>
+        <div class="feature-item">
+          <h3 class="feature-icon"><i class="fa fa-line-chart" aria-hidden="true"></i></h3>
+          <h3>Start lean</h3>
+          <p>Start lean with zero cost.<br/>
+            Pay as you go. We offers elastic plans.</p>
+        </div>
+        <div class="feature-item">
+          <h3 class="feature-icon"><i class="fa fa-money" aria-hidden="true"></i></h3>
+          <h3>Moneti<wbr>zation</h3>
+          <p>We offers monetization via Ad with one line of code.</p>
+        </div>
+      </div>
+    </div>
+    <a class="btn" href="/docs#why">Learn more</a>
+  </section>
+
+  <section class="code-example">
+    <div class="container">
+      <pre v-highlightjs="sourcecode"><code class="python">import bothub
+
+class MyBot(bothub.Bot):
+   def handle_message(self, event, context):
+       visited = self.get_user_data().get('visited', False)
+       message = 'Nice to meet you!' if visited else 'How have you been?'
+       self.send_message(message)
+       self.set_user_data({'visited': True})</code></pre>
+      <div class="code-description">
+        <p>Write a bot code with predefined class and methods.</p>
+        <p>And then, you get robust massive messaging, logging, analytic, storage facilities with no additional efforts.</p>
+        <p class="note">* For now, we supports only python3.<br/> Python2, ruby, nodejs coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Supported channels -->
+  <section class="channels">
+    <div class="container">
+      <h2>Channels</h2>
+      <ul>
+        <li><img src="https://cdn.worldvectorlogo.com/logos/facebook-messenger.svg"/></li>
+        <li><img src="https://cdn.worldvectorlogo.com/logos/telegram.svg"/></li>
+        <li><img class="disabled" src="https://cdn.worldvectorlogo.com/logos/slack-1.svg"></li>
+        <li><img class="disabled" src="https://cdn.worldvectorlogo.com/logos/kakaotalk.svg"></li>
+        <li><img class="disabled" src="https://cdn.worldvectorlogo.com/logos/line-messenger.svg"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: Pricing plans -->
+  <section class="pricing-plans">
+    <div class="container">
+      <h2>Pricing Plans</h2>
+      <div>
+        <ul class="price">
+          <li class="header">STARTER</li>
+          <li>Ads included</li>
+          <li>5 Bots</li>
+          <li>50k Interactions/month</li>
+          <li>No monetization</li>
+          <li>Community Support</li>
+          <li class="footer">$0/month</li>
+        </ul>
+        <ul class="price">
+          <li class="header">PRO</li>
+          <li>Ad free</li>
+          <li>Unlimited bots</li>
+          <li>Usage-based pricing</li>
+          <li>Monetization via Ads</li>
+          <li>E-mail Support</li>
+          <li class="footer">CONTACT US</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h1 class="cta">We are ready to launch!</h1>
+    <router-link :to="{ name: 'register' }" class="btn btn-cta">Get Started</router-link>
+  </section>
+</article>
+
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 340" class="middleman-logo" aria-labelledby="middleman-logo__title" role="img">
+     <title id="middleman-logo__title">Middleman</title>
+     <path class="middleman-logo__top-left-bar" fill-opacity=".45" d="M0 40L200 0v30L0 60z"/>
+     <path class="middleman-logo__top-right-bar" fill="#fff" d="M200 0l200 40v20L200 30z"/>
+     <path class="middleman-logo__left-m" fill-opacity=".45" d="M0 78v184l45 5V152l45 83 47-83v129l53 7V52l-57 8-43 83-43-70z"/>
+     <path class="middleman-logo__right-m" fill="#fff" d="M400 78v184l-45 5V152l-45 83-47-83v129l-53 7V52l57 8 43 83 43-70z"/>
+     <path class="middleman-logo__bottom-left-bar" fill-opacity=".45" d="M0 300l200 40v-30L0 280z"/>
+     <path class="middleman-logo__bottom-right-bar" fill="#fff" d="M200 340l200-40v-20l-200 30z"/>
+     </svg>
+
+     <h1>
+     Middleman is Running
+     </h1>
+
+     <%= link_to(
+     "Read Documentation",
+     "https://middlemanapp.com/basics/templating_language/",
+     target: "_blank"
+     ) %> -->

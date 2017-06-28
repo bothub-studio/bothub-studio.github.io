@@ -1,0 +1,71 @@
+/* Base */
+
+$site-container-width: 1140px;
+
+$promo-section-vertical-margin: 70px;
+$promo-section-horizontal-margin: 10px;
+
+$navbar-horizontal-margin: 0.3rem;
+
+$color-black: #222;
+$color-sky-blue: #17baef;
+$color-dark-sky-blue: #074f66;
+$color-light-gray2: #676767;
+$color-light-gray0: #fafafa;
+$color-light-gray3: #f1f1f1;
+$color-light-gray: #f5f5f5;
+$color-dark-gray: #777;
+$color-dark-gray2: #323232;
+$color-gray: #ddd;
+$color-white: white;
+$color-red: red;
+$color-tomato: tomato;
+$color-light-red: rgba(255, 0, 0, 0.3);
+$color-limegreen: limegreen;
+
+$site-color-1: $color-black;
+$site-color-2: $color-sky-blue;
+$site-color-3: $color-light-gray;
+$site-color-4: $color-gray;
+$site-color-5: $color-dark-sky-blue;
+
+$main-light-background-color: $color-white;
+$main-light-text-color: $color-black;
+
+$main-dark-background-color: $color-black;
+$main-dark-text-color: $color-white;
+
+$navbar-background-color: $main-dark-background-color;
+$navbar-text-color: $main-dark-text-color;
+
+$site-footer-background-color: $color-light-gray2;
+
+$button-color-1: $site-color-2;
+
+$mobile: "screen and (max-width: 414px)";
+$tablet: "screen and (min-width: 415px) and (max-width: 750px)";
+$desktop: "screen and (min-width: 751px)";
+$mobile-and-tablet: "screen and (max-width: 750px)";
+$desktop-and-tablet: "screen and (min-width: 414px)";
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+pre {
+  margin: 0;
+  padding: 0;
+}
+fieldset {
+  border: 0;
+}
+pre {
+  text-align: left;
+}

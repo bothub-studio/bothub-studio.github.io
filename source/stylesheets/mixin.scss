@@ -1,0 +1,143 @@
+@mixin padding-main-content-area () {
+  padding: 3rem 0;
+}
+
+%ul-no-symbol {
+  padding: 0;
+  li {
+    list-style: none;
+  }
+}
+
+%grayscale {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+%colorset-site-color-1 {
+  /* fg:white, bg:black */
+  color: $main-dark-text-color;
+  background-color: $main-dark-background-color;
+}
+
+%colorset-site-color-1-reverse {
+  /* fg:black, bg:white */
+  color: $main-dark-text-color;
+  background-color: $main-dark-background-color;
+}
+
+/* fg: black, bg: inherit */
+/* fg: black, bg: white */
+/* fg: white, bg: inherit */
+/* fg: white, bg: sky-blue */
+/* fg: white, bg: dark-sky-blue */
+/* fg: white, bg: black */
+/* fg: sky-blue, bg: inherit */
+/* fg: sky-blue, bg: gray */
+/* fg: dark-red, bg: light-red */
+/* fg: dark-red, bg: light-gray */
+/* fg: dark-blue, bg: light-blue */
+/* fg: light-black, bg: inherit */
+/* fg: light-black, bg: white */
+
+%colorset-red-inherit {
+  color: $color-red;
+}
+
+%colorset-light-black-white {
+  color: $color-light-gray2;
+  background-color: $color-white;
+}
+
+%colorset-skyblue-inherit {
+  color: $color-sky-blue;
+  background-color: inherit;
+}
+
+%colorset-white-skyblue {
+  color: $color-white;
+  background-color: $color-sky-blue;
+}
+
+%colorset-skyblue-inherit {
+  color: $color-sky-blue;
+}
+
+%colorset-dark-gray-inherit {
+  color: $color-dark-gray;
+}
+
+%colorset-gray2-inherit {
+  color: $color-light-gray2;
+}
+
+%colorset-dark-red-light-gray {
+  color: $color-tomato;
+  background-color: $color-light-gray3;
+}
+
+%card {
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 10px 0 rgba(0,0,0,.12);
+}
+
+%transition {
+  transition: all 0.2s;
+}
+
+@mixin border-radius-left ($radius) {
+  border-top-left-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius-right ($radius) {
+  border-top-right-radius: $radius;
+  border-bottom-right-radius: $radius;
+}
+
+@mixin border-radius-top ($radius) {
+  border-top-right-radius: $radius;
+  border-top-left-radius: $radius;
+}
+
+@mixin border-radius-bottom ($radius) {
+  border-bottom-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+}
+
+@mixin border-radius ($radius) {
+  border-radius: $radius;
+}
+
+@mixin set-fg-bg-color ($fg, $bg) {
+  color: $fg;
+  background-color: $bg;
+}
+
+@mixin container($width:$site-container-width) {
+  max-width: $width;
+  margin: 0 auto;
+}
+
+@mixin flex ($grow: 0, $shrink: 1, $basis: auto, $flow: row, $wrap: nowrap, $justify-content: flex-start, $align-items: stretch) {
+  display: flex;
+  flex-wrap: $wrap;
+  flex-flow: $flow;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  > * {
+    flex: $grow $shrink $basis;
+  }
+}
+
+@mixin border ($thickness: 1px, $color: black, $radius: 0) {
+  border: $thickness solid $color;
+  @include border-radius($radius);
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
