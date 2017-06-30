@@ -7,3 +7,6 @@ gem 'wdm', '~> 0.1', platforms: [:mswin, :mingw]
 
 # Added at 2017-06-29 23:02:42 +0900 by toracle:
 gem "pandoc-ruby", "~> 2.0"
+
+# Added at 2017-06-30 15:06:10 +0900 by toracle:
+gem "middleman-deploy", "~> 2.0.0.pre.alpha"

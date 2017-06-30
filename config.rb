@@ -48,3 +48,9 @@ activate :directory_indexes
 #   activate :minify_css
 #   activate :minify_javascript
 # end
+
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.branch = 'master'
+  deploy.deploy_method = :git
+end
