@@ -1,3 +1,6 @@
+---
+title: Documentation - BotHub.Studio
+---
 <section class="container docs">
   <article>
     <p>Hello! Welcome to BotHub.Studio's developer documentation!</p>
@@ -94,8 +97,6 @@
     <blockquote class="code">
       <pre># -*- coding: utf-8 -*-
 
-from __future__ import (absolute_import, division, print_function, unicode_literals)
-
 from bothub_client.bot import BaseBot
 
 class Bot(BaseBot):
@@ -104,7 +105,7 @@ class Bot(BaseBot):
 BaseBot superclass have methods belows:
 
 * Send message
-  * self.send_message(message, user_id=None, channel=None)
+  * self.send_message(message, chat_id=None, channel=None)
 * Data Storage
   * self.set_project_data(data)
   * self.get_project_data()
