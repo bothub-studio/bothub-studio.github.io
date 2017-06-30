@@ -1,17 +1,17 @@
 chatbots:
 
   - title: Instagram photo download
-    icon_url: //d3q6dk6wplpy9l.cloudfront.net/images/store/insta_128.png
+    icon_url: https://d3q6dk6wplpy9l.cloudfront.net/images/store/insta_128.png
     icon_alt_text: Instagram photo download bot
     description: Instagram photo downloader
     channels:
-      - link: //t.me/InstaPhoto_Bot
+      - link: https://t.me/InstaPhoto_Bot
         channel: telegram
 
   - title: Now Weather!
-    icon_url: //d3q6dk6wplpy9l.cloudfront.net/images/store/cloud_128.png
+    icon_url: https://d3q6dk6wplpy9l.cloudfront.net/images/store/cloud_128.png
     icon_alt_text: Now Weather!
     description: 현재 위치의 날씨와 미세먼지 정보가 필요하세요?
     channels:
-      - link: //t.me/FineParticles_Bot
+      - link: https://t.me/FineParticles_Bot
         channel: telegram
