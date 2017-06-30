@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="BotHub.Studio">
+    <meta name="description" content="Build a serverless chatbot on BotHub.Studio. We provide a robust backend system for deploy, run and manage a chatbot.">
+    <meta name="robots" content="index,follow,noodp">
+    <meta name="googlebot" content="index,follow">
+    <meta name="subject" content="Build a serverless chatbot on BotHub.Studio. We provide a robust backend system for deploy, run and manage a chatbot.">
+    <meta name="rating" content="General">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/monokai.min.css">
+
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Welcome to BotHub.Studio</title>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header class="front site">
+        <div class="container">
+  <nav class="site">
+    <input class="trigger" type="checkbox" id="mainNavButton">
+    <label class="trigger-icon" for="mainNavButton" onclick>Menu <i class="fa trigger-indicator"></i></label>
+    <a class="navbar-brand" href="/">
+      BotHub<em>.</em>Studio<sup><em>beta</em></sup>
+    </a>
+    <ul class="menu">
+      <li><a href="/docs/">Docs</a></li>
+      <li><a href="/store/">Store</a></li>
+      <li><a to="#" class="disabled" >Community</a></li>
+    </ul>
+    <div>
+      <a href="https://app.bothub.studio/login" class="btn btn-signin">Sign in</a>
+    </div>
+  </nav>
+</div>
+
+      </header>
+      <main class="front contents">
+        <article class="front-promo">
+  <!-- Section: Console -->
+  <section class="promo-console">
+    <div class="container">
+      <h2>Deploy your <em>chatbot</em> with ease</h2>
+      <video autoplay loop>
+        <source src="http://d3q6dk6wplpy9l.cloudfront.net/media/tty.mp4"
+                type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+
+  <!-- Section: What you gets -->
+  <section class="what-you-gets">
+    <div class="container">
+      <div>
+        <div><hr/></div>
+        <h2>What you gets...</h2>
+        <div><hr/></div>
+      </div>
+      <div class="features">
+        <div class="feature-item">
+          <h3 class="feature-icon"><i class="fa fa-pencil" aria-hidden="true"></i></h3>
+          <h3>Take Your Code</h3>
+          <p>Write code, keep it yours.<br/>
+            The core of the code should always be yours.</p>
+        </div>
+        <div class="feature-item">
+          <h3 class="feature-icon"><i class="fa fa-gears" aria-hidden="true"></i></h3>
+          <h3>Backend Free</h3>
+          <p>You build bot, we build backend.<br/>
+            You need a robust backend as bot grows.</p>
+        </div>
+        <div class="feature-item">
+          <h3 class="feature-icon"><i class="fa fa-line-chart" aria-hidden="true"></i></h3>
+          <h3>Start lean</h3>
+          <p>Start lean with zero cost.<br/>
+            Pay as you go. We offers elastic plans.</p>
+        </div>
+        <div class="feature-item">
+          <h3 class="feature-icon"><i class="fa fa-money" aria-hidden="true"></i></h3>
+          <h3>Moneti<wbr>zation</h3>
+          <p>We offers monetization via Ad with one line of code.</p>
+        </div>
+      </div>
+    </div>
+    <a href="/docs/" class="btn">Learn more</a>
+  </section>
+
+  <section class="code-example">
+    <div class="container">
+      <pre><code class="python">import bothub
+
+class MyBot(bothub.Bot):
+   def handle_message(self, event, context):
+       visited = self.get_user_data().get('visited', False)
+       message = 'Nice to meet you!' if visited else 'How have you been?'
+       self.send_message(message)
+       self.set_user_data({'visited': True})</code></pre>
+      <div class="code-description">
+        <p>Write a bot code with predefined class and methods.</p>
+        <p>And then, you get robust massive messaging, logging, analytic, storage facilities with no additional efforts.</p>
+        <p class="note">* For now, we supports only python3.<br/> Python2, ruby, nodejs coming soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Supported channels -->
+  <section class="channels">
+    <div class="container">
+      <h2>Channels</h2>
+      <ul>
+        <li><img src="https://cdn.worldvectorlogo.com/logos/facebook-messenger.svg"/></li>
+        <li><img src="https://cdn.worldvectorlogo.com/logos/telegram.svg"/></li>
+        <li><img class="disabled" src="https://cdn.worldvectorlogo.com/logos/slack-1.svg"></li>
+        <li><img class="disabled" src="https://cdn.worldvectorlogo.com/logos/kakaotalk.svg"></li>
+        <li><img class="disabled" src="https://cdn.worldvectorlogo.com/logos/line-messenger.svg"></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section: Pricing plans -->
+  <section class="pricing-plans">
+    <div class="container">
+      <h2>Pricing Plans</h2>
+      <div>
+        <ul class="price">
+          <li class="header">STARTER</li>
+          <li>Ads included</li>
+          <li>5 Bots</li>
+          <li>50k Interactions/month</li>
+          <li>No monetization</li>
+          <li>Community Support</li>
+          <li class="footer">$0/month</li>
+        </ul>
+        <ul class="price">
+          <li class="header">PRO</li>
+          <li>Ad free</li>
+          <li>Unlimited bots</li>
+          <li>Usage-based pricing</li>
+          <li>Monetization via Ads</li>
+          <li>E-mail Support</li>
+          <li class="footer">CONTACT US</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h1 class="cta">We are ready to launch!</h1>
+    <a href="https://app.bothub.studio/register" class="btn btn-cta">Get Started</a>
+  </section>
+</article>
+
+      </main>
+      <footer class="front site">
+        <section>
+  <div>
+    <ul class="horizontal-menu">
+      <li><a href="/docs">Documentation</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li>&copy; 2017 BotHub.Studio</li>
+      <li><a href="emailto:bothub@bothub.studio">bothub@bothub.studio</a></li>
+      <li><em>This service is currently in beta.</em></li>
+    </ul>
+  </div>
+</section>
+
+      </footer>
+    </div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/python.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

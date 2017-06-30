@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="BotHub.Studio">
+    <meta name="description" content="Build a serverless chatbot on BotHub.Studio. We provide a robust backend system for deploy, run and manage a chatbot.">
+    <meta name="robots" content="index,follow,noodp">
+    <meta name="googlebot" content="index,follow">
+    <meta name="subject" content="Build a serverless chatbot on BotHub.Studio. We provide a robust backend system for deploy, run and manage a chatbot.">
+    <meta name="rating" content="General">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/monokai.min.css">
+
+    <!-- Use the title from a page's frontmatter if it has one -->
+    <title>Documentation - BotHub.Studio</title>
+    <link href="/stylesheets/site.css" rel="stylesheet" />
+    <script src="/javascripts/site.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <header class=" site">
+        <div class="container">
+  <nav class="site">
+    <input class="trigger" type="checkbox" id="mainNavButton">
+    <label class="trigger-icon" for="mainNavButton" onclick>Menu <i class="fa trigger-indicator"></i></label>
+    <a class="navbar-brand" href="/">
+      BotHub<em>.</em>Studio<sup><em>beta</em></sup>
+    </a>
+    <ul class="menu">
+      <li><a href="/docs/">Docs</a></li>
+      <li><a href="/store/">Store</a></li>
+      <li><a to="#" class="disabled" >Community</a></li>
+    </ul>
+    <div>
+      <a href="https://app.bothub.studio/login" class="btn btn-signin">Sign in</a>
+    </div>
+  </nav>
+</div>
+
+      </header>
+      <main class=" contents">
+        <section class="container docs">
+  <article>
+    <p>Hello! Welcome to BotHub.Studio's developer documentation!</p>
+    <p>BotHub.Studio is a backend platform for bot deployment and management. Our goal is to help developers to focus on their own logic not on engineering issues.</p>
+
+    <h2 id="why">Why BotHub Studio?</h2>
+
+    <br/>
+
+    <h3 id="why-code">Take Code Ownership</h3>
+
+    <p>There are many services already on chatbot service ecosystem.</p>
+    <p>Some of them are great, especially for UI chatbot builder even non-developer can build a chatbot with ease.</p>
+    <p>But we are developers. We don't want to melted down our efforts into someone's service UI which can't save it to my local machine or to GitHub. Moreover, sometimes we want to use other tools which a service doesn't provide yet.</p>
+    <p>We don't have enough time and money to make whole part of chatbot by our own hands. So we are searching some tools or frameworks. But we want to own most important part at least.</p>
+    <p>BotHub.Studio helps us to deploy and run my own code. They only supports backend service. I can own important core of my bot and control it.</p>
+
+    <h3 id="why-backend">Backend Free</h3>
+
+    <p>There are many 'Make a chatbot in 10 minutes' stuffs today. (Even BotHub.Studio says that!)</p>
+    <p>But, getting more traction, you need to solve many hard engineering problems.</p>
+
+    <ol>
+      <li>You should handle increasing throughput</li>
+      <li>Send massive messages to messenger platform efficiently to keep reasonable responsiveness</li>
+      <li>Sometimes message orders messed up</li>
+      <li>Someday you need a scheduler</li>
+      <li>Someday you need a database. Moreover each users need their own persistent storage</li>
+      <li>You need a deployment automation to eliminate SPOF to improve a reliability</li>
+      <li>Someday you need a logging system</li>
+      <li>... And statistics, and analytics base on that</li>
+    </ol>
+
+    <p>You need a skilled backend software engineer to solve these tough issues. Hiring this kind of engineer is not so easy, but it costs high even you get in touched them.</p>
+    <p>Imagine this, many backend software engineers all over the world solves same issues in their own company. How inefficient it is. You can use your energy to solve better, more important, more productive issues.</p>
+    <p>Bothub.Studio is operated by senior backend engineers, we improve a backend of bothub.studio by every day. We only charges only a dozens of dollar per month. It's much like a supporting open source project. You pay $10 per month, we can build a more robust backend, everyone can enjoy the platform.</p>
+
+    <h3 id="why-start-lean">Start Lean</h3>
+
+    <p>We offers elastic pricing plans.</p>
+    <p>One is Starter Plan, which includes 5 bots, 50k interactions per month, BotHub.Studio advertisement.</p>
+
+    <h3 id="why-monetization">Monetization</h3>
+
+
+    <h2 id="installation">Installation</h2>
+
+    <p><code class="inline">bothub-cli</code> is a unified tool to manage your bot status. With this tool you can integrate development workflow into your working environment.</p>
+
+    <p>To install <code class="inline">bothub-cli</code>:</p>
+    <blockquote class="code">
+      $ pip install bothub-cli
+    </blockquote>
+
+    <p>or, if you are not installing in a <code class="inline">virtualenv</code>:</p>
+    <blockquote class="code">
+      $ sudo pip install bothub-cli
+    </blockquote>
+
+    <p>The <code class="inline">bothub-cli</code> package works on python2 and 3 both.</p>
+
+    <h2 id="getting-started">Getting Started</h2>
+    <p>Before using <code class="inline">bothub-cli</code>, you need to tell it about your BotHub.Studio credentials.</p>
+
+    <blockquote class="code">
+      $ bothub configure<br/>
+      Username: myuser<br/>
+      Password: mysecret
+    </blockquote>
+
+    <p>Then it stores access token on <code class="inline">~/.bothub</code> directory.</p>
+    <p>To start build a new bot:</p>
+    <blockquote class="code">
+      $ mkdir mybot<br/>
+      $ cd mybot<br/>
+      $ bothub init<br/>
+      Porject name: mybot
+    </blockquote>
+
+    <p class="help">Now you have a starter echo bot:</p>
+
+    <blockquote class="code">
+      <pre>.
+|-- bothub
+|  |--bot.py
+|  `--__init__.py
+|-- bothub.yml
+|-- requirements.txt
+`-- tests</pre>
+    </blockquote>
+
+    <p>Edit bot.py below for your purpose.</p>
+
+    <blockquote class="code">
+      <pre># -*- coding: utf-8 -*-
+
+from bothub_client.bot import BaseBot
+
+class Bot(BaseBot):
+"""Represent a Bot logic which interacts with a user.
+
+BaseBot superclass have methods belows:
+
+* Send message
+  * self.send_message(message, chat_id=None, channel=None)
+* Data Storage
+  * self.set_project_data(data)
+  * self.get_project_data()
+  * self.set_user_data(data, user_id=None, channel=None)
+  * self.get_user_data(user_id=None, channel=None)
+
+When you omit user_id and channel argument, it regarded as a user
+who triggered a bot.
+"""
+  def handle_message(self, event, context):
+    self.send_message(event['content'])</pre>
+    </blockquote>
+
+    <p>and deploy it.</p>
+
+    <blockquote class="code">
+      $ bothub deploy
+    </blockquote>
+
+    <p class="help">You also need to configure channel to use.</p>
+
+    <blockquote class="code">
+      $ bothub channel add telegram --api-key=&lt;my-api-key&gt;<br/>
+      $ bothub channel add facebook --app-id=&lt;app_id&gt; --app-secret=&lt;app_secret&gt; --page-access-token=&lt;page_access_token&gt;
+    </blockquote>
+    <h2 id="usage">Usage</h2>
+
+    <blockquote class="code">
+      <pre>Usage: bothub [OPTIONS] COMMAND [ARGS]...
+
+Bothub is a command line tool that configure, init, and deploy bot codes
+to BotHub.Studio service
+
+Options:
+  --help  Show this message and exit.
+
+Commands:
+  channel    Setup channels of current project
+  configure  Setup credentials
+  deploy     Deploy project
+  init       Initialize project
+  ls         List projects
+  rm         Delete a project</pre>
+    </blockquote>
+
+    <h3 id="setup">Setup</h3>
+    <p>Authorize a user and get access token.</p>
+    <blockquote class="code">
+      $ bothub configure
+    </blockquote>
+    <br/>
+    <h3 id="project-management">Project management</h3>
+    <p>Initialize project on current directory. Create a echo chatbot code.</p>
+    <blockquote class="code">
+      $ bothub init
+    </blockquote>
+    <p>Deploy current project.</p>
+    <blockquote class="code">
+      $ bothub deploy
+    </blockquote>
+    <p>List of projects.</p>
+    <blockquote class="code">
+      $ bothub ls
+    </blockquote>
+    <p>Delete a project.</p>
+    <blockquote class="code">
+      $ bothub rm &lt;project_name&gt;
+    </blockquote>
+    <br/>
+    <h3 id="channel-management">Channel management</h3>
+    <p>List of channels for current project.</p>
+    <blockquote class="code">
+      $ bothub channel ls
+    </blockquote>
+    <p>Add a channel for current project.</p>
+    <blockquote class="code">
+      $ bothub channel add telegram --api-key=&lt;my-api-key&gt;<br/>
+      $ bothub channel add facebook --app-id=&lt;app_id&gt; --app-secret=&lt;app_secret&gt; --page-access-token=&lt;page_access_token&gt;
+    </blockquote>
+    <p>Remove a channel from current project.</p>
+    <blockquote class="code">
+      $ bothub channel rm &lt;channel&gt;
+    </blockquote>
+    <h2 id="resources">Resources</h2>
+    <p><ul><li>Documentaion (TBD)</li></ul></p>
+  </article>
+  <aside class="toc">
+    <ul>
+      <li><a href="#why">Why BotHub Studio?</a></li>
+      <li><a href="#installation">Installation</a></li>
+      <li><a href="#getting-started">Getting Started</a></li>
+      <li><a href="#usage">Usage</a></li>
+      <li><a href="#resources">Resources</a></li>
+    </ul>
+  </aside>
+</section>
+
+      </main>
+      <footer class=" site">
+        <section>
+  <div>
+    <ul class="horizontal-menu">
+      <li><a href="/docs">Documentation</a></li>
+      <li><a href="#">Features</a></li>
+      <li><a href="#">FAQ</a></li>
+    </ul>
+  </div>
+  <div>
+    <ul>
+      <li>&copy; 2017 BotHub.Studio</li>
+      <li><a href="emailto:bothub@bothub.studio">bothub@bothub.studio</a></li>
+      <li><em>This service is currently in beta.</em></li>
+    </ul>
+  </div>
+</section>
+
+      </footer>
+    </div>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/python.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+/* Base */
+* {
+  box-sizing: border-box; }
+
+html,
+body,
+fieldset,
+h1,
+h2,
+h3,
+h4,
+h5,
+pre {
+  margin: 0;
+  padding: 0; }
+
+fieldset {
+  border: 0; }
+
+pre {
+  text-align: left; }
