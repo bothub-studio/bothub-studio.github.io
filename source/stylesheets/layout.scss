@@ -150,7 +150,29 @@ article.front-promo section.pricing-plans .price {
     }
   }
   article.front-promo section.code-example .container {
-    @include flex($grow: 1, $basis: 0);
+    @include flex($grow: 1, $shrink: 1, $basis: auto);
+
+    pre {
+      margin-right: 3rem;
+    }
+  }
+}
+
+@media #{$mobile-and-tablet} {
+  .front-promo .code-example .container {
+    @include flex($flow: column);
+  }
+}
+
+.front-promo .code-example .container {
+  pre code {
+      width: 100%;
+      height: 100%;
+      padding: 1rem;
+  }
+
+  .code-description {
+    text-align: left;
   }
 }
 
@@ -323,20 +345,4 @@ article.store div.project {
 }
 code {
   padding: 0.2rem;
-}
-section.code-example pre {
-  @media #{$desktop-and-tablet} {
-    margin-right: 3rem;
-  }
-  code {
-    width: 100%;
-    height: 100%;
-    padding: 2rem;
-  }
-}
-section.code-example div.code {
-  padding: 1rem;
-}
-section.code-example .code-description {
-  text-align: left;
 }
