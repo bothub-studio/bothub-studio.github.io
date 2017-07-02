@@ -276,15 +276,19 @@ section.docs {
     @include padding-main-content-area();
   }
 }
+section.docs > article {
+  @media #{$desktop} {
+    flex: 1 1;
+  }
+}
 section.docs aside.toc {
   @media #{$mobile-and-tablet} {
     display: none;
   }
   @media #{$desktop} {
-    flex-grow: 0;
-    flex-shrink: 0;
-    padding-right: 2rem;
+    flex: 0 0 auto;
     margin-right: 2rem;
+    padding-right: 2rem;
     border-right: 1px solid $site-color-4;
   }
 }
