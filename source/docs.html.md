@@ -11,7 +11,7 @@ toc:
     title: Usage
 ---
 
-hello! welcome to BotHub.Studio's developer documentation!
+Hello! Welcome to BotHub.Studio's developer documentation!
 
 BotHub.Studio is a backend platform for chatbot deployment and management. Our goal is to help developers to focus on their own logic not on engineering issues.
 
