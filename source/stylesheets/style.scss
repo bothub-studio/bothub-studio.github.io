@@ -280,44 +280,11 @@ a.disabled {
 }
 main:not(.front) pre > code {
   display: block;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   font-family: monospace;
   background-color: $color-light-gray;
   padding: 1rem;
   overflow: auto;
-}
-table.project-list {
-  border-collapse: collapse;
-  color: $color-light-gray2;
-  box-shadow: 0 0 0 2px $color-light-gray3;
-  th, tr:not(:last-child) td {
-    border-bottom: 2px solid $color-light-gray3;
-  }
-  thead tr {
-    background-color: $color-light-gray0;
-  }
-}
-table.project-list {
-  th,
-  td:not(:last-child) {
-    text-align: left;
-  }
-  td:last-child {
-    text-align: right;
-  }
-  td:first-child {
-    @extend .sans-font;
-    span.project-name {
-      @extend %colorset-skyblue-inherit;
-      font-weight: 500;
-    }
-    span.project-summary {
-      font-size: 0.8rem;
-    }
-  }
-}
-table.project-list img.channel-image {
-  width: 24px;
 }
 .dropdown-more {
   @extend %colorset-skyblue-inherit;
@@ -343,18 +310,6 @@ aside.toc a {
 aside.toc a:hover {
   color: $site-color-2;
 }
-section.create-project {
-  min-height: 70vh;
-}
-.project-property-menu {
-  padding: 1rem;
-  @extend %colorset-light-black-white;
-  @extend %card;
-}
-.project-icon {
-  font-size: 2rem;
-  color: $color-sky-blue;
-}
 p > code {
   @extend %colorset-dark-red-light-gray;
   @include border-radius(0.25rem);
@@ -368,51 +323,6 @@ section.code-example pre {
 p.note {
   font-size: 0.9rem;
   color: $color-dark-gray;
-}
-.channel-management img.logo {
-  width: 36px;
-}
-section.channel-management .project-channel {
-  @extend %card;
-}
-section.channel-management .fa-toggle:after {
-  content: ' \f105';
-}
-section.channel-management .open .fa-toggle:after {
-  content: ' \f107';
-}
-section.project-management > header > h1 {
-  font-size: 1.5rem;
-}
-section.property-management .project-property-item label,
-section.property-management .project-property-item input {
-  font-size: 1rem;
-}
-section.property-management .project-property-item .project-property-key {
-  @media #{$mobile} {
-    @include border-radius-top(0.25rem);
-  }
-  @media #{$desktop-and-tablet} {
-    @include border-radius-left(0.25rem);
-  }
-  font-weight: 600;
-}
-section.property-management .project-property-item .project-property-value {
-  @media #{$mobile} {
-    @include border-radius-bottom(0.25rem);
-  }
-  @media #{$desktop-and-tablet} {
-    @include border-radius-right(0.25rem);
-  }
-}
-section.property-management .project-property-item input.project-property-key  {
-  border: 1px solid $color-gray;
-}
-section.property-management .project-property-item input.project-property-value {
-  border: 1px solid $color-gray;
-}
-li.project-property-item:hover .view .buttons {
-  visibility: visible;
 }
 .danger {
   color: $color-tomato;
