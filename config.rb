@@ -54,3 +54,6 @@ activate :deploy do |deploy|
   deploy.branch = 'master'
   deploy.deploy_method = :git
 end
+
+set :markdown_engine, :redcarpet
+set :markdown, :fenced_code_blocks => true, :smartypants => true

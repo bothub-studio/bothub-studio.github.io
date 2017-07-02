@@ -10,3 +10,6 @@ gem "pandoc-ruby", "~> 2.0"
 
 # Added at 2017-06-30 15:06:10 +0900 by toracle:
 gem "middleman-deploy", "~> 2.0.0.pre.alpha"
+
+# Added at 2017-07-02 19:39:41 +0900 by toracle:
+gem "redcarpet", "~> 3.4"
