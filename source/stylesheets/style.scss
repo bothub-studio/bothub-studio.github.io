@@ -278,7 +278,9 @@ a.disabled {
   color: $color-dark-gray !important;
   pointer-events: none;
 }
-blockquote.code {
+main:not(.front) pre > code {
+  display: block;
+  font-size: 1.2rem;
   font-family: monospace;
   background-color: $color-light-gray;
   padding: 1rem;
@@ -353,7 +355,7 @@ section.create-project {
   font-size: 2rem;
   color: $color-sky-blue;
 }
-code.inline {
+p > code {
   @extend %colorset-dark-red-light-gray;
   @include border-radius(0.25rem);
 }

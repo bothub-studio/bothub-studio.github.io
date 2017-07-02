@@ -13,7 +13,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-page '/documentation.html', layout: 'docs'
+page '/docs.html', layout: 'docs'
 
 activate :directory_indexes
 

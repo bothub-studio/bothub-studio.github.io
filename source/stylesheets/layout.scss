@@ -261,6 +261,10 @@ section.docs h2 {
   border-left: 0.5rem solid $site-color-2;
   padding-left: 0.5rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+section.docs h3 {
+  margin-top: 2rem;
 }
 section.docs {
   margin-bottom: 1.5rem;
@@ -277,56 +281,18 @@ section.docs aside.toc {
     display: none;
   }
   @media #{$desktop} {
-    flex-basis: 15rem;
     flex-grow: 0;
     flex-shrink: 0;
+    padding-right: 2rem;
     margin-right: 2rem;
     border-right: 1px solid $site-color-4;
   }
-}
-section.project-list {
-  @include padding-main-content-area();
 }
 article.store div.project {
   display: inline-block;
   width: 340px;
   margin: 10px;
   padding: 20px;
-}
-table.project-list {
-  @media #{$mobile-and-tablet} {
-    width: 100%;
-  }
-  @media #{$desktop} {
-    width: 80%;
-  }
-  td {
-    padding: 1rem;
-  }
-  th {
-    padding: 0.2rem 1rem;
-  }
-  @media #{$mobile} {
-    td.channel,
-    th.channel {
-      display: none;
-    }
-  }
-}
-table.analytics {
-  width: 100%;
-
-  thead th {
-    border-bottom: 1px solid $site-color-4;
-    padding: 0.3rem;
-    margin-bottom: 0.3rem;
-  }
-  .date { text-align: center; }
-  .value { text-align: right; }
-}
-section.project-list {
-  min-height: 70vh;
-  @include flex($justify-content: center);
 }
 .project-icon {
   @media #{$mobile} {
@@ -362,127 +328,5 @@ section.code-example pre {
     width: 100%;
     height: 100%;
     padding: 2rem;
-  }
-}
-section.code-example div.code {
-  padding: 1rem;
-}
-section.code-example .code-description {
-  text-align: left;
-}
-section.project-management {
-  @include container(600px);
-  @include padding-main-content-area();
-}
-section.channel-management .project-channel {
-  margin-bottom: 1rem;
-}
-section.channel-management .project-channel > * {
-  width: 100%;
-  height: 100%;
-  padding: 1.5rem;
-  overflow: hidden;
-}
-section.channel-management .project-channel-detail {
-  padding: 0 1rem 1rem 1rem;
-}
-section.channel-management .project-channel-summary {
-  @include flex($flow:row, $grow: 1, $align-items: center);
-}
-section.channel-management .project-channel-detail {
-  display: none;
-}
-section.channel-management .open .project-channel-detail {
-  display: block;
-}
-section.channel-management .project-channel-summary > * {
-  display: inline-block;
-}
-section.channel-management .project-channel-summary > .logo {
-  margin-right: 1rem;
-  flex-basis: 50px;
-  flex-grow: 0;
-}
-section.channel-management .project-channel-summary > .name {
-  font-size: 1.3rem;
-  width: 150px;
-}
-section.channel-management .project-channel-summary > .buttons {
-  text-align: right;
-}
-section.project-management > header {
-  @include flex($grow: 1, $align-items: center);
-  border-bottom: 1px solid $color-light-gray3;
-  padding-bottom: 1rem;
-  margin-bottom: 2rem;
-}
-.channel-icon {
-  display: inline-block;
-  margin-right: 5px;
-}
-section.property-management .project-property-item {
-  .view, .edit {
-    @include flex($grow: 3, $basis: 0);
-    > .buttons {
-      flex-grow: 0;
-      flex-basis: 4rem;
-    }
-  }
-  .new {
-    @media #{$mobile} {
-      @include flex($flow: column);
-      padding: $promo-section-horizontal-margin;
-    }
-    @media #{$desktop-and-tablet} {
-      @include flex($grow: 3, $basis: 0);
-      > .buttons {
-        flex-grow: 0;
-        flex-basis: 4rem;
-      }
-    }
-  }
-  .edit {
-    display: none;
-  }
-  .view {
-    display: flex;
-    .buttons {
-      visibility: hidden;
-    }
-    &:hover .buttons {
-      visibility: visible;
-    }
-  }
-}
-section.property-management .project-property-item label,
-section.property-management .project-property-item input {
-  padding: 0.5rem;
-}
-section.property-management .project-property-item .project-property-key {
-  flex-grow: 2;
-}
-section.property-management .project-property-item .project-property-value {
-  @media #{$mobile} {
-    margin-top: -1px;
-    margin-bottom: 1rem;
-  }
-  @media #{$desktop-and-tablet} {
-    margin-left: -1px;
-  }
-}
-section.property-management .project-property-item .buttons {
-  @include flex($align-items: center, $justify-content: center);
-  @media #{$mobile} {
-    .btn {
-      width: 100%;
-    }
-  }
-}
-section.property-management .editing {
-  .edit {
-    display: flex;
-  }
-  .view {
-    display: none;
   }
 }

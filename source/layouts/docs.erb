@@ -3,5 +3,15 @@
     <article>
       <%= yield %>
     </article>
+
+    <% if current_page.data.toc %>
+      <aside class="toc">
+      <ul>
+        <% current_page.data.toc.each do |element| %>
+          <li><a href="#<%= element.id %>"><%= element.title %></a></li>
+        <% end %>
+      </ul>
+    </aside>
+    <% end %>
   </section>
 <% end %>
