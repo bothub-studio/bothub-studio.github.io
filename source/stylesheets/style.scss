@@ -27,9 +27,6 @@ a {
 a:hover {
   @extend %colorset-skyblue-inherit;
 }
-ul {
-  @extend %ul-no-symbol;
-}
 main:not(.front) {
   @extend %colorset-gray2-inherit;
 }
@@ -113,6 +110,9 @@ nav.site .btn-signin:hover {
 }
 footer.site > section {
   border-top: 1px solid $color-gray;
+}
+footer.site ul {
+  @extend %ul-no-symbol;
 }
 footer:not(.front) a {
   @extend %colorset-gray2-inherit;
@@ -314,7 +314,8 @@ aside.toc a {
 aside.toc a:hover {
   color: $site-color-2;
 }
-p > code {
+p > code,
+li > code {
   @extend %colorset-dark-red-light-gray;
   @include border-radius(0.25rem);
 }

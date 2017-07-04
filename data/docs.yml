@@ -1,0 +1,9 @@
+toc:
+  - href: /docs/
+    title: Overview
+  - href: /docs/bothub-studio/
+    title: BotHub Studio
+  - href: /docs/bothub-cli/
+    title: BotHub CLI
+  - href: /docs/bothub-package/
+    title: BotHub package

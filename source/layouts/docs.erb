@@ -4,11 +4,11 @@
       <%= yield %>
     </article>
 
-    <% if current_page.data.toc %>
+    <% if data.to_h['docs'][:toc] %>
       <aside class="toc">
       <ul>
-        <% current_page.data.toc.each do |element| %>
-          <li><a href="#<%= element.id %>"><%= element.title %></a></li>
+        <% data.to_h['docs'][:toc].each do |element| %>
+          <li><a href="<%= element[:href] %>"><%= element[:title] %></a></li>
         <% end %>
       </ul>
     </aside>
