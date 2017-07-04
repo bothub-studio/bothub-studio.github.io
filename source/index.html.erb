@@ -28,7 +28,7 @@ isFront: true
           <h3 class="feature-icon"><i class="fa fa-pencil" aria-hidden="true"></i></h3>
           <h3>Take Your Code</h3>
           <p>Write code, keep it yours.<br/>
-            The core of the code should always be yours.</p>
+            The chatbot core should always be yours.</p>
         </div>
         <div class="feature-item">
           <h3 class="feature-icon"><i class="fa fa-gears" aria-hidden="true"></i></h3>
@@ -40,12 +40,12 @@ isFront: true
           <h3 class="feature-icon"><i class="fa fa-line-chart" aria-hidden="true"></i></h3>
           <h3>Start lean</h3>
           <p>Start lean with zero cost.<br/>
-            Pay as you go. We offers elastic plans.</p>
+            Pay as you go. We offers elastic pricing plans.</p>
         </div>
         <div class="feature-item">
           <h3 class="feature-icon"><i class="fa fa-money" aria-hidden="true"></i></h3>
           <h3>Moneti<wbr>zation</h3>
-          <p>We offers monetization via Ad with one line of code.</p>
+          <p>We offers monetization via Ad with one line of code. Start with simple way of profit.</p>
         </div>
       </div>
     </div>
@@ -54,16 +54,16 @@ isFront: true
 
   <section class="code-example">
     <div class="container">
-      <pre><code class="python">import bothub
+      <pre><code class="python">from bothub_client.bot import BaseBot
+from bothub_client.messages import Message
 
-class MyBot(bothub.Bot):
+class OrderBot(BaseBot):
    def handle_message(self, event, context):
-       visited = self.get_user_data().get('visited', False)
-       message = 'Nice to meet you!' if visited else 'How have you been?'
-       self.send_message(message)
-       self.set_user_data({'visited': True})</code></pre>
+       message = Message(event).set_text('Nice to meet you!')\
+                               .add_quick_reply('Show menu')
+       self.send_message(message)</code></pre>
       <div class="code-description">
-        <p>Write a bot code with predefined class and methods.</p>
+        <p>Write a chatbot with BotHub.Studio SDK.</p>
         <p>And then, you get robust massive messaging, logging, analytic, storage facilities with no additional efforts.</p>
         <p class="note">* For now, we supports python3 only. Python2, ruby, nodejs coming soon.</p>
       </div>
