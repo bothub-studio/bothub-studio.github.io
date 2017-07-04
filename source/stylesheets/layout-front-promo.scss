@@ -7,9 +7,6 @@ article.front-promo > section {
   h2 { margin-bottom: $promo-section-vertical-margin; }
 }
 
-.front-promo .main-copy {
-}
-
 article.front-promo section.promo-console video {
   @media #{$mobile-and-tablet} {
     display: none;
