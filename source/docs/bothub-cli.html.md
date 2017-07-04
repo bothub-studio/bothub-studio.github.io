@@ -113,11 +113,16 @@ Options:
 
 Commands:
   channel    Setup channels of current project
+  clone      Clone existing project
   configure  Setup credentials
   deploy     Deploy project
   init       Initialize project
+  logs       Show error logs
   ls         List projects
+  nlu        Manage project NLU integrations
+  property   Manage project properties
   rm         Delete a project
+  test       Run test chat session
 ```
 
 ### Setup
