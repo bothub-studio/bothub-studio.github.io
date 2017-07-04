@@ -72,21 +72,21 @@ from bothub_client.bot import BaseBot
 from bothub_client.messages import Message
 
 class Bot(BaseBot):
-"""Represent a Bot logic which interacts with a user.
+  """Represent a Bot logic which interacts with a user.
 
-BaseBot superclass have methods belows:
+  BaseBot superclass have methods belows:
 
-* Send message
-  * self.send_message(message, chat_id=None, channel=None)
-* Data Storage
-  * self.set_project_data(data)
-  * self.get_project_data()
-  * self.set_user_data(data, user_id=None, channel=None)
-  * self.get_user_data(user_id=None, channel=None)
+  * Send message
+    * self.send_message(message, chat_id=None, channel=None)
+  * Data Storage
+    * self.set_project_data(data)
+    * self.get_project_data()
+    * self.set_user_data(data, user_id=None, channel=None)
+    * self.get_user_data(user_id=None, channel=None)
 
-When you omit user_id and channel argument, it regarded as a user
-who triggered a bot.
-"""
+  When you omit user_id and channel argument, it regarded as a user
+  who triggered a bot.
+  """
   def handle_message(self, event, context):
     message = Message(event).set_text('You says: {}'.format(event['content']))\
                             .add_quick_reply('Yes')\
