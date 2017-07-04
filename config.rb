@@ -5,6 +5,12 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :deploy do |deploy|
+  deploy.build_before = true
+  deploy.branch = 'master'
+  deploy.deploy_method = :git
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -49,12 +55,6 @@ activate :directory_indexes
 #   activate :minify_css
 #   activate :minify_javascript
 # end
-
-activate :deploy do |deploy|
-  deploy.build_before = true
-  deploy.branch = 'master'
-  deploy.deploy_method = :git
-end
 
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true, :with_toc_data => true
