@@ -18,7 +18,9 @@ article.front-promo section.promo-console video {
 
 article.front-promo section.what-you-gets .container {
   > div:first-child {
-    @include flex($align-items: baseline, $grow: 1);
+    @media #{$desktop-and-tablet} {
+      @include flex($align-items: baseline, $grow: 1);
+    }
   }
 }
 
