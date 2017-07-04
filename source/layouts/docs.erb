@@ -4,12 +4,12 @@
       <%= yield %>
     </article>
 
-    <% if data.to_h['docs'][:toc] %>
+    <% if data.docs.toc %>
       <aside class="toc">
       <ul>
-        <% data.to_h['docs'][:toc].each do |element| %>
+        <% data.docs.toc.each do |element| %>
           <li>
-            <%= link_to element[:title], element[:href] %>
+            <%= link_to element.title, element.href %>
           </li>
         <% end %>
       </ul>

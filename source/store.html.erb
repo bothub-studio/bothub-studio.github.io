@@ -7,17 +7,17 @@ title: Store - BotHub.Studio
     </aside>
 
     <div class="project-list">
-      <% data.to_h["store"][:chatbots].each do |bot| %>
+      <% data.botstore.chatbots.each do |bot| %>
         <div class="project">
-          <img class="store" src="<%= bot[:icon_url] %>" alt="<%= bot[:icon_alt_text] %>">
+          <img class="store" src="<%= bot.icon_url %>" alt="<%= bot.icon_alt_text %>">
           <div class="project-desc">
-            <h1 class="title"><%= bot[:title] %></h1>
-            <p><%= bot[:description] %></p><br />
+            <h1 class="title"><%= bot.title %></h1>
+            <p><%= bot.description %></p><br />
           </div>
           <div class="project-action">
-            <% bot[:channels].each do |channel| %>
-              <a href="<%= channel[:link] %>" class="btn btn-outline-primary">
-                <i class="fa fa-<%= channel[:channel] %>" aria-hidden="true"></i> Add
+            <% bot.channels.each do |channel| %>
+              <a href="<%= channel.link %>" class="btn btn-outline-primary">
+                <i class="fa fa-<%= channel.channel %>" aria-hidden="true"></i> Add
               </a>
             <% end %>
           </div>
