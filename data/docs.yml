@@ -5,5 +5,5 @@ toc:
     title: BotHub Studio
   - href: /docs/bothub-cli.html
     title: BotHub CLI
-  - href: /docs/bothub-package.html
-    title: BotHub package
+  - href: /docs/bothub-sdk-python.html
+    title: BotHub SDK (Python)

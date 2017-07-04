@@ -16,14 +16,14 @@
 
 %colorset-site-color-1 {
   /* fg:white, bg:black */
-  color: $main-dark-text-color;
-  background-color: $main-dark-background-color;
+  color: $color-white;
+  background-color: $color-black;
 }
 
 %colorset-site-color-1-reverse {
   /* fg:black, bg:white */
-  color: $main-dark-text-color;
-  background-color: $main-dark-background-color;
+  color: $color-white;
+  background-color: $color-black;;
 }
 
 /* fg: black, bg: inherit */
@@ -45,7 +45,7 @@
 }
 
 %colorset-light-black-white {
-  color: $color-light-gray2;
+  color: $color-black;
   background-color: $color-white;
 }
 

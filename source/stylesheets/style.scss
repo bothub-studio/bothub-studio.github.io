@@ -18,6 +18,9 @@ label {
   line-height: 1.5;
   color: $color-black;
 }
+body {
+  background-color: $color-site-gray;
+}
 a.link-danger {
   color: $color-red !important;
 }
@@ -28,7 +31,7 @@ a:hover {
   @extend %colorset-skyblue-inherit;
 }
 main:not(.front) {
-  @extend %colorset-gray2-inherit;
+  color: $color-black;
 }
 .sans-font {
   font-family: "Ubuntu", sans-serif;
@@ -42,84 +45,10 @@ body > div[id=app] > header {
   @extend .sans-font;
 }
 body > div[id=app] > header.front {
-  background-color: $main-dark-background-color;
+  background-color: $color-black;
+  /* background-color: $color-primary-dark; */
+  color: black;
   @extend .sans-font;
-}
-nav.site,
-nav.site a,
-nav.site label {
-  color: $navbar-text-color;
-}
-nav.site a:hover {
-  color: $site-color-2;
-  @extend %transition;
-}
-nav.site .navbar-brand {
-  font-size: 1.5rem;
-  font-weight: 600;
-  sup {
-    font-size: 0.8rem;
-  }
-  em {
-    color: $color-tomato;
-  }
-}
-nav.site > ul > li {
-  a {
-    font-size: 1.3rem;
-    text-decoration: none;
-  }
-  a:hover {
-    @extend %transition;
-  }
-}
-nav.site > form a {
-  font-size: 1.2rem;
-  text-decoration: none;
-}
-nav.site .btn-signin {
-  font-size: 1.3rem;
-  @extend %colorset-skyblue-inherit;
-  border: 1px solid $site-color-2;
-  @include border-radius(0.3rem);
-}
-nav.site .btn-signin:hover {
-  @extend %colorset-white-skyblue;
-  @extend %transition;
-}
-@media #{$mobile-and-tablet} {
-  nav.site input.trigger {
-    & ~ label.trigger-icon .trigger-indicator:after {
-      content: ' \f105';
-    }
-    &:checked ~ label.trigger-icon .trigger-indicator:after {
-      content: ' \f107';
-    }
-  }
-  nav.site .btn {
-    border: 0;
-    background-color: inherit;
-    &:hover {
-      background-color: inherit;
-    }
-  }
-  nav.site a:not(.navbar-brand) {
-    display: inline-block;
-    width: 100%;
-  }
-}
-footer.site > section {
-  border-top: 1px solid $color-gray;
-}
-footer.site ul {
-  @extend %ul-no-symbol;
-}
-footer:not(.front) a {
-  @extend %colorset-gray2-inherit;
-}
-footer.front,
-footer.front * {
-  @extend %colorset-site-color-1-reverse;
 }
 ul.horizontal-menu {
   li { display: inline; }
@@ -128,78 +57,23 @@ ul.horizontal-menu {
   font-size: 1.3rem;
   @extend .sans-font;
 }
-article.front-promo {
-  font-size: 1.3rem;
-
-  h2 {
-    font-size: 2rem;
-    text-align: center;
-  }
-}
-article.front-promo section.promo-console {
-  @extend %colorset-site-color-1;
-  em {
-    color: $site-color-2;
-    font-style: normal;
-  }
-}
-article.front-promo section.what-you-gets {
-  h3 {
-    font-size: 1.5rem;
-  }
-  h3.feature-icon {
-    font-size: 4rem;
-    margin: 1rem 0;
-  }
-  p {
-    font-size: 1rem;
-  }
-}
-article.front-promo section.code-example {
-  @extend %colorset-site-color-1;
-}
-article.front-promo section.pricing-plans {
-  background-color: $site-color-2;
-
-  .price {
-    @extend %ul-no-symbol;
-    li {
-      background-color: $main-light-background-color;
-      border-bottom: 1px solid $site-color-3;
-    }
-    li.header {
-      font-weight: bold;
-      @extend .sans-font;
-      border-bottom: 1px solid $site-color-4;
-      @include set-fg-bg-color($site-color-2, $site-color-3);
-      @include border-radius-top(1rem);
-    }
-    li.footer {
-      font-weight: bold;
-      @include border-radius-bottom(1rem);
-    }
-  }
-}
-article.front-promo section.channels {
-  img { width: 86px; }
-}
 img.disabled {
   @extend %grayscale;
 }
 .form-group label.icon-label {
-  background-color: $site-color-3;
-  border: 1px solid $site-color-4;
+  background-color: $color-light-gray;
+  border: 1px solid $color-gray;
   @include border-radius-left(0.25rem);
 }
 .form-group input {
   font-size: 1rem;
-  border: 1px solid $site-color-4;
+  border: 1px solid $color-gray;
   @include border-radius-right(0.25rem);
 }
 .form-general input,
 .form-general select {
   font-size: 1rem;
-  border: 1px solid $site-color-4;
+  border: 1px solid $color-gray;
   @include border-radius(0.25rem);
 }
 .form-general label {
@@ -208,14 +82,14 @@ img.disabled {
 .btn,
 .btn-default {
   font-size: 1rem;
-  background-color: $site-color-2;
+  background-color: $color-sky-blue;
   color: $color-white;
   border: 0;
   @include border-radius(0.25rem);
 }
 .btn:hover,
 .btn-default:hover {
-  background-color: $site-color-5;
+  background-color: $color-dark-sky-blue;
   color: $color-white;
   border: 0;
   @include border-radius(0.25rem);
@@ -245,7 +119,7 @@ h1.cta {
 }
 hr {
   border: 0;
-  border-top: 1px solid $site-color-4;
+  border-top: 1px solid $color-gray;
 }
 .alert {
   padding: 1rem;
@@ -253,14 +127,14 @@ hr {
   border: 1px solid;
 }
 .alert-danger {
-  color: #a94442;
-  background-color: #f2dede;
-  border-color: #ebcccc;
+  color: $color-alert-text;
+  background-color: $color-alert-background;
+  border-color: $color-alert-border;
 }
 .alert-info {
-  color: #31708f;
-  background-color: #d9edf7;
-  border-color: #bcdff1;
+  color: $color-info-text;
+  background-color: $color-info-background;
+  border-color: $color-info-border;
 }
 .usermenu .dropdown {
   background-color: $color-white;
@@ -284,10 +158,10 @@ a.disabled {
 }
 main:not(.front) pre > code {
   display: block;
-  font-size: 1.0rem;
+  font-size: 1rem;
   font-family: monospace;
-  background-color: $color-light-gray;
-  padding: 1rem;
+  background-color: $color-site-gray-dark;
+  padding: 0.6rem;
   overflow: auto;
 }
 .dropdown-more {
@@ -295,7 +169,7 @@ main:not(.front) pre > code {
 }
 article.store div.project {
   @include border-radius(0.2rem);
-  border: 1px solid $site-color-2;
+  border: 1px solid $color-sky-blue;
   @extend %card;
 }
 article.store .project-desc h1 {
@@ -309,29 +183,17 @@ aside.toc ul {
   }
 }
 aside.toc a {
-  color: $site-color-1;
+  color: $color-black;
 }
 aside.toc a:hover {
-  color: $site-color-2;
+  color: $color-sky-blue;
 }
 p > code,
 li > code {
-  @extend %colorset-dark-red-light-gray;
+  /* @extend %colorset-dark-red-light-gray; */
+  background-color: $color-light-gray;
   @include border-radius(0.25rem);
-}
-section.code-example pre {
-  @extend %card;
-  code {
-    font-size: 1rem;
-  }
-}
-p.note {
-  font-size: 1rem;
-  color: $color-dark-gray;
 }
 .danger {
   color: $color-tomato;
-}
-.approval {
-  color: $color-limegreen;
 }

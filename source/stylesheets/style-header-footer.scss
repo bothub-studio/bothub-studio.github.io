@@ -1,0 +1,75 @@
+nav.site,
+nav.site a,
+nav.site label {
+  color: $color-white;
+}
+nav.site a:hover {
+  color: $color-sky-blue;
+  @extend %transition;
+}
+nav.site .navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+  sup {
+    font-size: 0.8rem;
+  }
+  em {
+    color: $color-tomato;
+  }
+}
+nav.site > ul > li {
+  a {
+    font-size: 1.3rem;
+    text-decoration: none;
+  }
+  a:hover {
+    @extend %transition;
+  }
+}
+nav.site > form a {
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+nav.site .btn-signin {
+  font-size: 1.3rem;
+  @extend %colorset-skyblue-inherit;
+  border: 1px solid $color-sky-blue;
+  @include border-radius(0.3rem);
+}
+nav.site .btn-signin:hover {
+  @extend %colorset-white-skyblue;
+  @extend %transition;
+}
+@media #{$mobile-and-tablet} {
+  nav.site input.trigger {
+    & ~ label.trigger-icon .trigger-indicator:after {
+      content: ' \f105';
+    }
+    &:checked ~ label.trigger-icon .trigger-indicator:after {
+      content: ' \f107';
+    }
+  }
+  nav.site .btn {
+    border: 0;
+    background-color: inherit;
+    &:hover {
+      background-color: inherit;
+    }
+  }
+  nav.site a:not(.navbar-brand) {
+    display: inline-block;
+    width: 100%;
+  }
+}
+footer.site > section {
+  border-top: 1px solid $color-gray;
+}
+footer.site ul {
+  @extend %ul-no-symbol;
+}
+footer.site {
+  background-color: $color-site-gray-dark;
+}
+footer.site a {
+  @extend %colorset-gray2-inherit;
+}

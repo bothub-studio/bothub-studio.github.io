@@ -1,4 +1,4 @@
-# BotHub Package
+# BotHub SDK (Python)
 
 This package provide components to works with `BotHub.Studio`, which is a chatbot hosting service.
 
