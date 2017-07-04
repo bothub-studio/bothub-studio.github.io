@@ -63,7 +63,9 @@ An `event` is a dict which contains following items:
 You can respond to this message with various tools we provides.
 
 
-## Messaging
+## API Reference
+
+### Messaging
 
 To send a message, use a `self.send_message` method with a message you want to send.
 
@@ -94,7 +96,7 @@ self.send_message(message)
 * `add_keyboard_button(text)`
 
 
-## Storage
+### Storage
 
 To store/retreive some property data, we provides following methods:
 
@@ -113,7 +115,7 @@ To store/retreive some property data, we provides following methods:
 If `user_id` and `channel` is `None`, it regarded as a message sender.
 
 
-## NLU Integeration
+### NLU Integeration
 
 You can use `nlu` method to perform NLU after setup NLU integration at BotHub.Studio.
 

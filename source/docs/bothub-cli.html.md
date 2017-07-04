@@ -193,7 +193,7 @@ Remove a channel from current project.
 $ bothub channel rm <channel-name>
 ```
 
-### NLU integration management
+### NLU management
 
 List of NLU integration for current project.
 
