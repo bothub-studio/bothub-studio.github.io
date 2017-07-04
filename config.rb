@@ -1,3 +1,5 @@
+require 'builder'
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -11,6 +13,8 @@ activate :deploy do |deploy|
   deploy.deploy_method = :git
 end
 
+activate :directory_indexes
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
@@ -19,10 +23,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-page '/docs.html', layout: 'docs'
 page '/docs/*.html', layout: 'docs'
-
-activate :directory_indexes
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
