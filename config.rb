@@ -15,6 +15,8 @@ end
 
 activate :directory_indexes
 
+activate :syntax
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
