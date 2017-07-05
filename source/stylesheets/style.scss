@@ -5,8 +5,9 @@
 .base-font {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
-code {
-  font-family: Andale Mono,Monaco,Consolas,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courior New,monospace;
+code,
+pre code {
+  font-family: Consolas,MonacoAndale Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courior New,monospace;
 }
 body,
 select,
@@ -93,12 +94,4 @@ hr {
 a.disabled {
   color: $color-dark-gray !important;
   pointer-events: none;
-}
-main:not(.front) pre > code {
-  display: block;
-  font-size: 1rem;
-  font-family: monospace;
-  background-color: $color-site-gray-dark;
-  padding: 0.6rem;
-  overflow: auto;
 }

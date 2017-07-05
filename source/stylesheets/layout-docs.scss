@@ -1,7 +1,6 @@
 /* Section - Documentation */
 
 section.docs {
-  margin-bottom: 1.5rem;
   @media #{$mobile-and-tablet} {
     padding: 1rem $promo-section-horizontal-margin;
   }
@@ -11,21 +10,17 @@ section.docs {
   }
 }
 section.docs h1 {
-  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+section.docs h2,
+section.docs h3,
+section.docs h4 {
+  margin-bottom: 1rem;
+  margin-top: 2rem;
 }
 section.docs h2 {
   border-left: 0.5rem solid $color-sky-blue;
   padding-left: 0.5rem;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-section.docs h3 {
-  margin-top: 2rem;
-}
-section.docs > article {
-  @media #{$desktop} {
-    flex: 1 1;
-  }
 }
 section.docs aside.toc {
   @media #{$mobile-and-tablet} {
@@ -38,4 +33,7 @@ section.docs aside.toc {
     padding-right: 2rem;
     border-right: 1px solid $color-gray;
   }
+}
+section.docs aside.toc ul li {
+  line-height: 3rem;
 }

@@ -1,8 +1,5 @@
 section.docs aside.toc ul {
   @extend %ul-no-symbol;
-  li {
-    margin-bottom: 1.2rem;
-  }
 }
 section.docs aside.toc a {
   color: $color-black;

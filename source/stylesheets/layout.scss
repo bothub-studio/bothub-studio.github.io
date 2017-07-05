@@ -17,6 +17,7 @@ main {
 }
 code {
   padding: 0.2rem;
+  overflow: auto;
 }
 button,
 .btn {
@@ -29,4 +30,8 @@ button,
 }
 .alert {
   margin: 20px 0;
+}
+pre > code {
+  display: block;
+  padding: 1rem;
 }
