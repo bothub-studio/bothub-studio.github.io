@@ -7,8 +7,11 @@ section.docs aside.toc a {
 section.docs aside.toc a:hover {
   color: $color-sky-blue;
 }
+section.docs pre code {
+  background-color: $color-site-gray-light-dark;
+}
 section.docs p > code,
 section.docs li > code {
-  background-color: $color-light-gray;
+  background-color: $color-site-gray-light-dark;
   @include border-radius(0.25rem);
 }
