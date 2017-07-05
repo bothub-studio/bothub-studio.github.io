@@ -1,0 +1,33 @@
+/* Section - Store */
+
+article.store div.project {
+  display: inline-block;
+  width: 340px;
+  margin: 10px;
+  padding: 20px;
+}
+article.store .project-icon {
+  @media #{$mobile} {
+    display: none;
+  }
+  @media #{$desktop} {
+    display: inline-block;
+    float: left;
+    margin-right: 1rem;
+  }
+}
+article.store img.store {
+  width: 65px;
+  float: left;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+article.store .project-desc p {
+  margin: 0;
+}
+article.store .project-action {
+  clear: both;
+  padding-top: 15px;
+  border-top: 1px solid $color-gray;
+  @include flex($flow:row-reverse);
+}

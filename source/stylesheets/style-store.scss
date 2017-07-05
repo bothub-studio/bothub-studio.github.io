@@ -1,0 +1,9 @@
+article.store div.project {
+  @include border-radius(0.2rem);
+  border: 1px solid $color-sky-blue;
+  @extend %card;
+}
+article.store .project-desc h1 {
+  font-size: 1.2rem;
+  margin: 0;
+}

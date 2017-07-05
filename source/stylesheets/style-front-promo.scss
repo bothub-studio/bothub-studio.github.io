@@ -1,98 +1,91 @@
-article.front-promo {
-  font-size: 1.3rem;
-
-  h2 {
-    font-size: 2rem;
-    text-align: center;
+/* Colors */
+.front-promo {
+  .code-example {
+    background-color: $color-accent-dark;
+    color: $color-white;
   }
-}
-
-.front-promo .main-copy {
-  background-color: $color-primary;
-}
-
-article.front-promo section.promo-console {
-  @extend %colorset-site-color-1;
-  em {
+  .pricing-plans {
+    background-color: $color-primary;
+    h2 {
+      color: $color-white;
+    }
+  }
+  .pricing-plans .price {
+    li {
+      background-color: $color-white;
+    }
+    li.header {
+      @include set-fg-bg-color($color-sky-blue, $color-light-gray);
+    }
+  }
+  .promo-console {
+    @extend %colorset-site-color-1;
+    em {
+      color: $color-sky-blue;
+    }
+  }
+  .code-example p.note {
+    font-size: 1rem;
+    color: $color-black;
+  }
+  .feature-take-your-code {
+    color: $color-tomato;
+  }
+  .feature-backend-free {
     color: $color-sky-blue;
-    font-style: normal;
+  }
+  .feature-start-lean {
+    color: $color-orange;
+  }
+  .feature-monetization {
+    color: $color-limegreen;
   }
 }
-article.front-promo section.what-you-gets {
+
+/* Text & Paragraph style */
+.front-promo {
+  font-size: 1.3rem;
+}
+.front-promo h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+.front-promo .promo-console em {
+  font-style: normal;
+}
+.front-promo .code-example p.note {
+  font-size: 1rem;
+}
+.front-promo .what-you-gets {
   h3 {
     font-size: 1.5rem;
   }
   h3.feature-icon {
     font-size: 4rem;
-    margin: 1rem 0;
   }
   p {
     font-size: 1rem;
   }
 }
-article.front-promo section.code-example {
-  /* @extend %colorset-site-color-1; */
-  background-color: $color-accent-dark;
-  color: $color-white;
-}
-
-.front-promo .main-copy {
-  background-color: $color-primary-dark;
-  color: white;
-  padding: $promo-section-vertical-margin/3 $promo-section-horizontal-margin;
-  em {
-    color: $color-accent;
+.front-promo .pricing-plans .price {
+  @extend %ul-no-symbol;
+  li {
+    border-bottom: 1px solid $color-light-gray;
+  }
+  li.header {
+    font-weight: bold;
+    @extend .sans-font;
+    border-bottom: 1px solid $color-gray;
+    @include border-radius-top(1rem);
+  }
+  li.footer {
+    font-weight: bold;
+    @include border-radius-bottom(1rem);
   }
 }
-
-article.front-promo section.pricing-plans {
-  /* background-color: $color-sky-blue; */
-  background-color: $color-primary;
-  h2 {
-    color: $color-white;
-  }
-
-  .price {
-    @extend %ul-no-symbol;
-    li {
-      background-color: $color-white;
-      border-bottom: 1px solid $color-light-gray;
-    }
-    li.header {
-      font-weight: bold;
-      @extend .sans-font;
-      border-bottom: 1px solid $color-gray;
-      @include set-fg-bg-color($color-sky-blue, $color-light-gray);
-      @include border-radius-top(1rem);
-    }
-    li.footer {
-      font-weight: bold;
-      @include border-radius-bottom(1rem);
-    }
-  }
-}
-article.front-promo section.channels {
-  img { width: 86px; }
-}
-section.code-example pre {
+.code-example pre {
   @extend %card;
   code {
     font-size: 1rem;
   }
-}
-section.code-example p.note {
-  font-size: 1rem;
-  color: $color-black;
-}
-.feature-take-your-code {
-  color: $color-tomato;
-}
-.feature-backend-free {
-  color: $color-sky-blue;
-}
-.feature-start-lean {
-  color: $color-orange;
-}
-.feature-monetization {
-  color: $color-limegreen;
 }

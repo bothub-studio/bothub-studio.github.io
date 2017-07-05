@@ -1,0 +1,17 @@
+section.docs aside.toc ul {
+  @extend %ul-no-symbol;
+  li {
+    margin-bottom: 1.2rem;
+  }
+}
+section.docs aside.toc a {
+  color: $color-black;
+}
+section.docs aside.toc a:hover {
+  color: $color-sky-blue;
+}
+section.docs p > code,
+section.docs li > code {
+  background-color: $color-light-gray;
+  @include border-radius(0.25rem);
+}

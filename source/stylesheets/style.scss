@@ -5,11 +5,9 @@
 .base-font {
   font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
 }
-
 code {
   font-family: Andale Mono,Monaco,Consolas,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courior New,monospace;
 }
-
 body,
 select,
 input,
@@ -20,9 +18,6 @@ label {
 }
 body {
   background-color: $color-site-gray;
-}
-a.link-danger {
-  color: $color-red !important;
 }
 a {
   text-decoration: none;
@@ -40,44 +35,8 @@ h1, h2, h3, h4, h5 {
   @extend .sans-font
 }
 .sr-only { display: none }
-body > div[id=app] > header {
-  background-color: $color-dark-sky-blue;
-  @extend .sans-font;
-}
-body > div[id=app] > header.front {
-  background-color: $color-black;
-  /* background-color: $color-primary-dark; */
-  color: black;
-  @extend .sans-font;
-}
-ul.horizontal-menu {
-  li { display: inline; }
-  li:after { content: " \00b7 "; }
-  li:last-child:after { content: ""; }
-  font-size: 1.3rem;
-  @extend .sans-font;
-}
 img.disabled {
   @extend %grayscale;
-}
-.form-group label.icon-label {
-  background-color: $color-light-gray;
-  border: 1px solid $color-gray;
-  @include border-radius-left(0.25rem);
-}
-.form-group input {
-  font-size: 1rem;
-  border: 1px solid $color-gray;
-  @include border-radius-right(0.25rem);
-}
-.form-general input,
-.form-general select {
-  font-size: 1rem;
-  border: 1px solid $color-gray;
-  @include border-radius(0.25rem);
-}
-.form-general label {
-  font-weight: bold;
 }
 .btn,
 .btn-default {
@@ -126,31 +85,10 @@ hr {
   @include border-radius(0.25rem);
   border: 1px solid;
 }
-.alert-danger {
-  color: $color-alert-text;
-  background-color: $color-alert-background;
-  border-color: $color-alert-border;
-}
 .alert-info {
   color: $color-info-text;
   background-color: $color-info-background;
   border-color: $color-info-border;
-}
-.usermenu .dropdown {
-  background-color: $color-white;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  color: $color-black;
-  border: 1px solid $color-gray;
-  @include border-radius(0.1rem);
-  text-align: center;
-  margin: 0;
-}
-.usermenu:hover .dropdown a {
-  color: $color-black;
-}
-.dropdown li.danger {
-  @extend %colorset-red-inherit;
-  border-top: 1px solid $color-gray;
 }
 a.disabled {
   color: $color-dark-gray !important;
@@ -163,37 +101,4 @@ main:not(.front) pre > code {
   background-color: $color-site-gray-dark;
   padding: 0.6rem;
   overflow: auto;
-}
-.dropdown-more {
-  @extend %colorset-skyblue-inherit;
-}
-article.store div.project {
-  @include border-radius(0.2rem);
-  border: 1px solid $color-sky-blue;
-  @extend %card;
-}
-article.store .project-desc h1 {
-  font-size: 1.2rem;
-  margin: 0;
-}
-aside.toc ul {
-  @extend %ul-no-symbol;
-  li {
-    margin-bottom: 1.2rem;
-  }
-}
-aside.toc a {
-  color: $color-black;
-}
-aside.toc a:hover {
-  color: $color-sky-blue;
-}
-p > code,
-li > code {
-  /* @extend %colorset-dark-red-light-gray; */
-  background-color: $color-light-gray;
-  @include border-radius(0.25rem);
-}
-.danger {
-  color: $color-tomato;
 }

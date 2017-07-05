@@ -1,13 +1,17 @@
-article.front-promo > section > .container {
-  @include container();
-}
-article.front-promo > section {
+.front-promo > section {
   padding: $promo-section-vertical-margin $promo-section-horizontal-margin;
   text-align: center;
-  h2 { margin-bottom: $promo-section-vertical-margin; }
+}
+.front-promo > section h2 {
+  margin-bottom: $promo-section-vertical-margin;
+}
+.front-promo > section > .container {
+  @include container();
 }
 
-article.front-promo section.promo-console video {
+/* Section - Promotion Console Video */
+
+.front-promo .promo-console video {
   @media #{$mobile-and-tablet} {
     display: none;
   }
@@ -16,83 +20,82 @@ article.front-promo section.promo-console video {
   }
 }
 
-article.front-promo section.what-you-gets .container {
-  > div:first-child {
-    @media #{$desktop-and-tablet} {
-      @include flex($align-items: baseline, $grow: 1);
-    }
+/* Section - What you gets */
+
+.front-promo .what-you-gets h3.feature-icon {
+  margin: 1rem 0;
+}
+.front-promo .what-you-gets .container > div:first-child {
+  @media #{$desktop-and-tablet} {
+    @include flex($align-items: baseline, $grow: 1);
   }
 }
-
-article.front-promo section.what-you-gets .features {
-  .feature-item {
-    display: inline-block;
-    width: 240px;
-    margin: 0 20px 20px 20px;
-  }
-}
-
-article.front-promo section.pricing-plans {
-  .price {
-    padding: 0;
-    display: inline-block;
-
-    li {
-      padding: 1rem 0;
-    }
-  }
-}
-
-article.front-promo section.pricing-plans .price {
-  @media #{$mobile-and-tablet} {
-    width: 90%;
-  }
-}
-
-@media #{$desktop} {
-  article.front-promo section.what-you-gets .features {
+.front-promo .what-you-gets .features {
+  @media #{$desktop} {
     @include flex($wrap: wrap, $justify-content: center);
   }
-  article.front-promo section.pricing-plans {
-    .container > div {
-      @include flex($wrap: wrap, $justify-content: center);
-    }
-    .price {
-      margin: 0 3rem;
-      width: 25rem;
-    }
-  }
-  article.front-promo section.code-example .container {
-    @include flex($grow: 1, $shrink: 1, $basis: auto);
-
-    pre {
-      margin-right: 3rem;
-    }
-  }
+}
+.front-promo .what-you-gets .features .feature-item {
+  display: inline-block;
+  width: 240px;
+  margin: 0 20px 20px 20px;
 }
 
-@media #{$mobile-and-tablet} {
-  .front-promo .code-example .container {
+/* Section - Code Example */
+
+.front-promo .code-example .container {
+  @media #{$desktop} {
+    @include flex($grow: 1, $shrink: 1, $basis: auto);
+  }
+  @media #{$mobile-and-tablet} {
     @include flex($flow: column);
   }
 }
-
-.front-promo .code-example .container {
-  pre code {
-    width: 100%;
-    height: 100%;
-    padding: 1rem;
-  }
-
-  .code-description {
-    text-align: left;
+.front-promo .code-example .container pre {
+  @media #{$desktop} {
+    margin-right: 3rem;
   }
 }
+.front-promo .code-example .container pre code {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+.front-promo .code-example .container .code-description {
+  text-align: left;
+}
 
-article.front-promo section.channels {
-  ul { text-align: center; }
-  li {
-    display: inline-block;
-    margin: 1rem;
+/* Section - Channels */
+.front-promo .channels img {
+  width: 86px;
+}
+.front-promo .channels ul {
+  text-align: center;
+}
+.front-promo .channels li {
+  display: inline-block;
+  margin: 1rem;
+}
+
+/* Section - Pricing Plans */
+
+.front-promo .pricing-plans .container > div {
+  @media #{$desktop} {
+    @include flex($wrap: wrap, $justify-content: center);
   }
+}
+.front-promo .pricing-plans .price {
+  padding: 0;
+  display: inline-block;
+
+  @media #{$mobile-and-tablet} {
+    width: 90%;
+  }
+  @media #{$desktop} {
+    margin: 0 3rem;
+    width: 25rem;
+  }
+}
+.front-promo .pricing-plans .price li {
+  padding: 1rem 0;
 }

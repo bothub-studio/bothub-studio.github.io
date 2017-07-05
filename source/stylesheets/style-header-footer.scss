@@ -1,3 +1,5 @@
+/* Color */
+
 nav.site,
 nav.site a,
 nav.site label {
@@ -5,26 +7,51 @@ nav.site label {
 }
 nav.site a:hover {
   color: $color-sky-blue;
-  @extend %transition;
+}
+nav.site .navbar-brand em {
+  color: $color-tomato;
+}
+footer.site {
+  background-color: $color-site-gray-dark;
+}
+footer.site a {
+  @extend %colorset-gray2-inherit;
+}
+nav.site .btn-signin {
+  @extend %colorset-skyblue-inherit;
+}
+nav.site .btn-signin:hover {
+  @extend %colorset-white-skyblue;
+}
+body > div[id=app] > header {
+  background-color: $color-dark-sky-blue;
+}
+body > div[id=app] > header.front {
+  background-color: $color-black;
+  color: black;
+}
+
+/* Text & Paragraph style */
+
+div[id=app] > header {
+  @extend .sans-font;
+}
+body > div[id=app] > header.front {
+  @extend .sans-font;
 }
 nav.site .navbar-brand {
   font-size: 1.5rem;
   font-weight: 600;
-  sup {
-    font-size: 0.8rem;
-  }
-  em {
-    color: $color-tomato;
-  }
 }
-nav.site > ul > li {
-  a {
-    font-size: 1.3rem;
-    text-decoration: none;
-  }
-  a:hover {
-    @extend %transition;
-  }
+nav.site .navbar-brand sup {
+  font-size: 0.8rem;
+}
+nav.site ul.menu > li {
+  @extend %ul-no-symbol;
+}
+nav.site ul.menu > li a {
+  font-size: 1.3rem;
+  text-decoration: none;
 }
 nav.site > form a {
   font-size: 1.2rem;
@@ -32,34 +59,8 @@ nav.site > form a {
 }
 nav.site .btn-signin {
   font-size: 1.3rem;
-  @extend %colorset-skyblue-inherit;
   border: 1px solid $color-sky-blue;
   @include border-radius(0.3rem);
-}
-nav.site .btn-signin:hover {
-  @extend %colorset-white-skyblue;
-  @extend %transition;
-}
-@media #{$mobile-and-tablet} {
-  nav.site input.trigger {
-    & ~ label.trigger-icon .trigger-indicator:after {
-      content: ' \f105';
-    }
-    &:checked ~ label.trigger-icon .trigger-indicator:after {
-      content: ' \f107';
-    }
-  }
-  nav.site .btn {
-    border: 0;
-    background-color: inherit;
-    &:hover {
-      background-color: inherit;
-    }
-  }
-  nav.site a:not(.navbar-brand) {
-    display: inline-block;
-    width: 100%;
-  }
 }
 footer.site > section {
   border-top: 1px solid $color-gray;
@@ -67,9 +68,49 @@ footer.site > section {
 footer.site ul {
   @extend %ul-no-symbol;
 }
-footer.site {
-  background-color: $color-site-gray-dark;
+header ul.horizontal-menu,
+footer ul.horizontal-menu {
+  li { display: inline; }
+  li:after { content: " \00b7 "; }
+  li:last-child:after { content: ""; }
+  font-size: 1.3rem;
+  @extend .sans-font;
 }
-footer.site a {
-  @extend %colorset-gray2-inherit;
+
+/* Effect */
+
+nav.site > ul > li a:hover {
+  @extend %transition;
+}
+nav.site .btn-signin:hover {
+  @extend %transition;
+}
+nav.site a:hover {
+  @extend %transition;
+}
+
+nav.site input.trigger {
+  @media #{$mobile-and-tablet} {
+    & ~ label.trigger-icon .trigger-indicator:after {
+      content: ' \f105';
+    }
+    &:checked ~ label.trigger-icon .trigger-indicator:after {
+      content: ' \f107';
+    }
+  }
+}
+nav.site .btn {
+  @media #{$mobile-and-tablet} {
+    border: 0;
+    background-color: inherit;
+    &:hover {
+      background-color: inherit;
+    }
+  }
+}
+nav.site a:not(.navbar-brand) {
+  @media #{$mobile-and-tablet} {
+    display: inline-block;
+    width: 100%;
+  }
 }
