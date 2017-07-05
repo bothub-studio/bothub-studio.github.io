@@ -58,7 +58,8 @@ You need to configure channel to use.
 
 ```sh
 $ bothub channel add telegram --api-key=<my-api-key>
-$ bothub channel add facebook --app-id=<app-id> --app-secret=<app-secret> --page-access-token=<page-access-token>
+$ bothub channel add facebook --app-id=<app-id> --app-secret=<app-secret> \
+                              --page-access-token=<page-access-token>
 ```
 
 Now, try talk to your chatbot.
@@ -189,7 +190,8 @@ Add a channel for current project.
 
 ```sh
 $ bothub channel add telegram --api-key=<api-key>
-$ bothub channel add facebook --app-id=<app-id> --app-secret=<app-secret> --page-access-token=<page-access-token>
+$ bothub channel add facebook --app-id=<app-id> --app-secret=<app-secret>\
+                              --page-access-token=<page-access-token>
 ```
 
 Remove a channel from current project.
