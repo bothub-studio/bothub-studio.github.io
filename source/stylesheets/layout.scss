@@ -9,7 +9,7 @@ header.site {
     padding: $promo-section-horizontal-margin;
   }
   @media #{$desktop} {
-    padding: $navbar-horizontal-margin;
+    padding: 0 $navbar-horizontal-margin;
   }
 }
 .container {
@@ -97,10 +97,10 @@ footer.front > section {
 
 main {
   height: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 230px;
 }
 footer.site {
-  height: 200px;
+  height: 230px;
 }
 section.docs h1 {
   padding-bottom: 1rem;
@@ -229,6 +229,7 @@ section.docs aside.toc {
   @media #{$desktop} {
     flex: 0 0 auto;
     margin-right: 2rem;
+    padding-left: $navbar-horizontal-margin;
     padding-right: 2rem;
     border-right: 1px solid $color-gray;
   }
