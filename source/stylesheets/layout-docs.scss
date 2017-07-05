@@ -29,16 +29,17 @@ section.docs > article {
 }
 section.docs aside.toc {
   @media #{$mobile-and-tablet} {
-    display: none;
+    margin-top: 2rem;
   }
   @media #{$desktop} {
     flex: 0 0 auto;
     margin-right: 2rem;
     padding-left: $navbar-horizontal-margin;
     padding-right: 2rem;
-    border-right: 1px solid $color-gray;
   }
 }
-section.docs aside.toc ul li {
-  line-height: 3rem;
+section.docs aside.toc ul li a {
+  @media #{$mobile-and-tablet} {
+    display: block;
+  }
 }

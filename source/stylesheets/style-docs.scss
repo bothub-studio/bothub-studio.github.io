@@ -7,11 +7,27 @@ section.docs aside.toc a {
 section.docs aside.toc a:hover {
   color: $color-sky-blue;
 }
-section.docs pre code {
+section.docs pre code,
+section.docs p > code,
+section.docs li > code {
   background-color: $color-site-gray-light-dark;
 }
 section.docs p > code,
 section.docs li > code {
-  background-color: $color-site-gray-light-dark;
   @include border-radius(0.25rem);
+}
+section.docs aside.toc {
+  @media #{$desktop} {
+    border-right: 1px solid $color-gray;
+  }
+  @media #{$mobile-and-tablet} {
+    border-top: 1px solid $color-gray;
+  }
+}
+section.docs aside.toc ul li {
+  margin: 1rem 0;
+}
+section.docs aside.toc ul li a {
+  border-left: 0.3rem solid $color-primary-light;
+  padding-left: 0.5rem;
 }
