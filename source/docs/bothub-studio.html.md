@@ -4,7 +4,7 @@
 
 ### Take Code Ownership
 
-There are meny services already on chatbot ecosystem. Some of them are great, especially for UI chatbot builder enables non-developer can build a chatbot with ease.
+There are many services already on chatbot ecosystem. Some of them are great, especially for UI chatbot builder enables non-developer can build a chatbot with ease.
 
 But we are developers. You can't bear our efforts are melted into specific commercial service, which can't be expressed in the form of code, be stored to GitHub. Sometimes you want a flexibility to mix several tools the service doesn't have yet.
 
