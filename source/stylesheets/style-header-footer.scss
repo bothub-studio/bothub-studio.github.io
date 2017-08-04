@@ -73,7 +73,6 @@ footer ul.horizontal-menu {
   li { display: inline; }
   li:after { content: " \00b7 "; }
   li:last-child:after { content: ""; }
-  font-size: 1.3rem;
   @extend .sans-font;
 }
 
