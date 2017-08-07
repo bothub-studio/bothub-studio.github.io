@@ -2,17 +2,6 @@
 
 ## Why BotHub Studio?
 
-### Take Code Ownership
-
-There are many services already on chatbot ecosystem. Some of them are great, especially for UI chatbot builder enables non-developer can build a chatbot with ease.
-
-But we are developers. You can't bear our efforts are melted into specific commercial service, which can't be expressed in the form of code, be stored to GitHub. Sometimes you want a flexibility to mix several tools the service doesn't have yet.
-
-You don't have enough time and money to make every part of chatbot from scratch. So you search some tools or frameworks which can help you. And you also want to have ownership of most important part.
-
-BotHub.Studio helps you to deploy and run our own chatbot code. We only provide a chatbot backend. You can own important core of your chatbot and control it.
-
-
 ### Backend Free
 
 You can find many 'Make a chatbot in 10 minutes' kind of articles today. Even BotHub.Studio says that too.
@@ -33,6 +22,17 @@ You need a complex backend architecture, a skilled backend software engineer to 
 Think about this, many backend software engineers all over the world solve same issues in their own company. How inefficient it is. You can use your energy to solve better, more important, more productive issues.
 
 BotHub.Studio is operated by senior backend engineers, we improve a backend of BotHub.Studio by every day. We only charge only a dozens of dollars per month. It's much like a supporting open source project. You pay tens of dollars per month, we can build a more robust backend, so everyone can enjoy the platform.
+
+
+### Take Code Ownership
+
+There are many services already on chatbot ecosystem. Some of them are great, especially for UI chatbot builder enables non-developer can build a chatbot with ease.
+
+But we are developers. You can't bear our efforts are melted into specific commercial service, which can't be expressed in the form of code, be stored to GitHub. Sometimes you want a flexibility to mix several tools the service doesn't have yet.
+
+You don't have enough time and money to make every part of chatbot from scratch. So you search some tools or frameworks which can help you. And you also want to have ownership of most important part.
+
+BotHub.Studio helps you to deploy and run our own chatbot code. We only provide a chatbot backend. You can own important core of your chatbot and control it.
 
 
 ### Start Lean
