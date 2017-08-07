@@ -60,4 +60,4 @@ page '/docs/*.html', layout: 'docs'
 # end
 
 set :markdown_engine, :redcarpet
-set :markdown, :fenced_code_blocks => true, :smartypants => true, :with_toc_data => true
+set :markdown, :fenced_code_blocks => true, :smartypants => true, :with_toc_data => true, :tables => true
