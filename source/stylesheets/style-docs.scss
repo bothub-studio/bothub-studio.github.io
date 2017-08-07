@@ -16,6 +16,14 @@ section.docs p > code,
 section.docs li > code {
   @include border-radius(0.25rem);
 }
+section.docs table {
+  border-collapse: collapse;
+}
+section.docs th, section.docs td {
+  border-top: 1px solid $color-dark-gray;
+  border-bottom: 1px solid $color-dark-gray;
+  padding: 0.5rem 1rem;
+}
 section.docs aside.toc {
   @media #{$desktop} {
     border-right: 1px solid $color-gray;
