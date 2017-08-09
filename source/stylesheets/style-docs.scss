@@ -1,3 +1,7 @@
+section.docs > article {
+  background-color: white;
+  @include border($color: #ccc, $radius: 0.25rem);
+}
 section.docs aside.toc ul {
   @extend %ul-no-symbol;
 }
@@ -26,14 +30,6 @@ section.docs th, section.docs td {
 }
 section.docs th {
   border-bottom: 2px solid $color-dark-gray;
-}
-section.docs aside.toc {
-  @media #{$desktop} {
-    border-right: 1px solid $color-gray;
-  }
-  @media #{$mobile-and-tablet} {
-    border-top: 1px solid $color-gray;
-  }
 }
 section.docs aside.toc ul li {
   margin: 1rem 0;

@@ -26,6 +26,7 @@ section.docs > article {
   @media #{$desktop} {
     flex: 1 1;
   }
+  padding: 2rem;
 }
 section.docs aside.toc {
   @media #{$mobile-and-tablet} {
