@@ -99,8 +99,7 @@
 }
 .front-promo .promo-console video {
   @media #{$desktop} {
-    mix-blend-mode: difference;
-    background-color: #222;
+    background-color: $color-black;
     @include border-radius(0.5rem);
   }
 }
