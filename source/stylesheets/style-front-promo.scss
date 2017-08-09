@@ -110,10 +110,13 @@
   url('/images/network-diagram-light.png') no-repeat center;
   background-size: cover;
 }
-.front-promo em.attention {
+.front-promo .footnote-mark {
   color: $color-tomato;
+  vertical-align: super;
+  font-size: 0.9rem;
 }
 .front-promo .pricing-plans .price-notes {
   text-align: left;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  color: $color-gray;
 }
