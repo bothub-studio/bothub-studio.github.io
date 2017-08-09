@@ -95,6 +95,13 @@
   @media #{$desktop} {
     margin: 0 1rem;
     width: 25rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 .front-promo .pricing-plans .price li {
