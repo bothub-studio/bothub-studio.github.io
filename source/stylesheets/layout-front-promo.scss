@@ -80,7 +80,7 @@
 
 /* Section - Pricing Plans */
 
-.front-promo .pricing-plans .container > div {
+.front-promo .pricing-plans .container .plan-list {
   @media #{$desktop} {
     @include flex($wrap: wrap, $justify-content: center);
   }

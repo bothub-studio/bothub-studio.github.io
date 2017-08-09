@@ -133,12 +133,12 @@ class OrderBot(BaseBot):
   <section class="pricing-plans">
     <div class="container">
       <h2>Pricing Plans</h2>
-      <div>
+      <div class="plan-list">
         <ul class="price">
           <li class="header">STARTER</li>
           <li>Ads included</li>
           <li>2 Bots</li>
-          <li>10k interactions / MO</li>
+          <li>10k interactions<em class="attention">*</em> / MO</li>
           <li>-</li>
           <li>Sleeps on idle</li>
           <li>Community Support</li>
@@ -148,7 +148,7 @@ class OrderBot(BaseBot):
           <li class="header">HOBBY</li>
           <li>Ads included</li>
           <li>5 Bots</li>
-          <li>30k interactions / MO</li>
+          <li>30k interactions<em class="attention">*</em> / MO</li>
           <li>-</li>
           <li>Never sleeps</li>
           <li>E-mail Support</li>
@@ -158,19 +158,22 @@ class OrderBot(BaseBot):
           <li class="header">PRO</li>
           <li>Ad free</li>
           <li>Unlimited bots</li>
-          <li>100k interactions / MO</li>
-          <li>$1 per addl. 3k interactions</li>
+          <li>100k interactions<em class="attention">*</em> / MO</li>
+          <li>$1 per addl. 3k interactions<em class="attention">*</em></li>
           <li>Never sleeps</li>
           <li>E-mail Support</li>
           <li class="footer">$45 / MO<br/><p><a href="https://goo.gl/E9V1bg" class="btn">BUY NOW</a></p></li>
         </ul>
       </div>
+      <div class="price-notes">
+        <p class="note"><em class="attention">*</em> interactions counts all each incoming webhook event and outgoing requests.</p>
+      </div>
     </div>
   </section>
 
   <section class="launch-your-chatbot">
-    <h1 class="cta">Launch your chatbot now!</h1>
-    <%= link_to 'Get Started', 'https://app.bothub.studio/register', :class => "btn btn-cta" %>
+    <h1 class="cta">Build your chatbot now!</h1>
+    <%= link_to 'Register now', 'https://app.bothub.studio/register', :class => "btn btn-cta" %>
   </section>
 </article>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
