@@ -24,6 +24,9 @@ section.docs th, section.docs td {
   border-bottom: 1px solid $color-dark-gray;
   padding: 0.5rem 1rem;
 }
+section.docs th {
+  border-bottom: 2px solid $color-dark-gray;
+}
 section.docs aside.toc {
   @media #{$desktop} {
     border-right: 1px solid $color-gray;
