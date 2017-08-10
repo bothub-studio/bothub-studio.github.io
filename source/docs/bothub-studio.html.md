@@ -95,4 +95,4 @@ BotHub.Studio offers all in one environment for chatbot hosting. We offers bot h
 | RDS (t2.small)    | $29.520        |
 | Grand total       | $29.928        |
 
-But you have to struggle with AWS jungle. Make an IAM account and grant proper permissions to it with strange AWS policy language, setup API Gateway. You need to setup a VPC also to connect it to RDS. RDS begin with t2.small plan.
+But you have to struggle with AWS jungle. Make an IAM account and grant proper permissions to it with strange AWS policy language, setup API Gateway. You will need a Database to build a serious chatbot and you need to setup a VPC to connect it to RDS. RDS begin with t2.small plan. Of cause you can use a DynamoDB which let you purchase on usage.
