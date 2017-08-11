@@ -46,5 +46,8 @@
     ga('create', 'UA-97211180-1', 'auto', { allowLinker: true });
     ga('send', 'pageview');
     </script>
+    <% if content_for?(:body_js_code) %>
+      <%= yield_content :body_js_code %>
+    <% end %>
   </body>
 </html>

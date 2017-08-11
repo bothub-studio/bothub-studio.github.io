@@ -3,7 +3,7 @@ isFront: true
 ---
 <article class="front-promo">
   <!-- Section: Console -->
-  <section class="promo-console">
+  <section id="promo-console" class="promo-console">
     <div class="container">
       <h2>Chatbot Hosting for <em>Developers</em></h2>
       <video autoplay loop>
@@ -15,7 +15,7 @@ isFront: true
   </section>
 
   <!-- Section: What you gets -->
-  <section class="what-you-gets">
+  <section id="what-you-gets" class="what-you-gets">
     <div class="container">
       <div class="features">
         <div class="feature-item">
@@ -86,7 +86,7 @@ isFront: true
     <%= link_to 'Learn more', '/docs/bothub-studio.html', :class => "btn" %>
   </section>
 
-  <section class="code-example">
+  <section id="code-example" class="code-example">
     <div class="container">
       <pre><code class="python">from bothub_client.bot import BaseBot
 from bothub_client.messages import Message
@@ -106,7 +106,7 @@ class OrderBot(BaseBot):
   </section>
 
   <!-- Section: Supported channels -->
-  <section class="channels">
+  <section id="channels" class="channels">
     <div class="container">
       <h2>Channels</h2>
       <ul>
@@ -130,7 +130,7 @@ class OrderBot(BaseBot):
   </section>
 
   <!-- Section: Pricing plans -->
-  <section class="pricing-plans">
+  <section id="pricing-plans" class="pricing-plans">
     <div class="container">
       <h2>Pricing Plans</h2>
       <div class="plan-list">
@@ -172,11 +172,26 @@ class OrderBot(BaseBot):
     </div>
   </section>
 
-  <section class="launch-your-chatbot">
+  <section id="build-your-chatbot" class="launch-your-chatbot">
     <h1 class="cta">Build your chatbot now!</h1>
     <%= link_to 'Register now', 'https://app.bothub.studio/register', :class => "btn btn-cta" %>
   </section>
 </article>
+
+<% content_for :body_js_code do %>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/python.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<%= javascript_include_tag "scrollspy" %>
 <script>hljs.initHighlightingOnLoad();</script>
+<script>
+var elem = $('article.front-promo > section');
+elem.on('scrollSpy:enter', function() {
+  var id = $(this).attr('id');
+  var path = window.location.pathname + '#' + id;
+  ga('send', 'pageview', path);
+});
+elem.scrollSpy();
+</script>
+<% end %>
