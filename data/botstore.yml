@@ -1,9 +1,9 @@
 chatbots:
 
-  - title: Instagram photo download
+  - title: Insta photo download
     icon_url: https://d3q6dk6wplpy9l.cloudfront.net/images/store/insta_128.png
     icon_alt_text: Instagram photo download bot
-    description: Instagram photo downloader
+    description: Instagram photo downloader (only photo)
     channels:
       - link: https://t.me/InstaPhoto_Bot
         channel: telegram
