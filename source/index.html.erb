@@ -186,7 +186,7 @@ class OrderBot(BaseBot):
 <%= javascript_include_tag "scrollspy" %>
 <script>hljs.initHighlightingOnLoad();</script>
 <script>
-var elem = $('article.front-promo > section');
+var elem = $('article.front-promo > #build-your-chatbot');
 elem.on('scrollSpy:enter', function() {
   var id = $(this).attr('id');
   var path = window.location.pathname + '#' + id;
