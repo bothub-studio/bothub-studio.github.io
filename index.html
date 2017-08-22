@@ -7,7 +7,7 @@
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="BotHub.Studio">
     <meta name="description" content="Chatbot hosting for Developers. Container-based bot worker, storage, conversation management included all-in-one easy to use solution.">
-    <meta name="keyword" content="chatbot,bothub.bothubstudio,serverless,hosting,chatbothosting">
+    <meta name="keyword" content="chatbot,bothub,bothubstudio,serverless,hosting,chatbot hosting">
     <meta name="robots" content="index,follow,noodp">
     <meta name="googlebot" content="index,follow">
     <meta name="subject" content="Chatbot hosting for Developers. Container-based bot worker, storage, conversation management included all-in-one easy to use solution.">
@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/monokai.min.css">
     <link rel="icon" type="image/png" href="/bothub-studio-icon.png?v=3">
+    <meta property="og:title" content="BotHub.Studio: Chatbot hosting service for Developers">
+    <meta property="og:image" content="https://bothub.studio/images/bothub-studio-logo.png">
+    <meta property="og:image:width" content="376">
+    <meta property="og:image:height" content="376">
+    <meta property="og:description" content="Chatbot hosting for Developers. Container-based bot worker, storage, conversation management included all-in-one easy to use solution.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://bothub.studio/">
+    <meta property="fb:app_id" content="1335312283250354">
 
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>BotHub.Studio: Chatbot hosting service for Developers</title>
@@ -75,9 +83,9 @@
           <h3 class="feature-icon feature-take-your-code">
             <i class="fa fa-code" aria-hidden="true"></i>
           </h3>
-          <h3>Write your Bot</h3>
-          <p>Write code, keep it yours.<br/>
-            The chatbot core should always be yours.</p>
+          <h3>Write Code</h3>
+          <p>Write code, not lots of click.<br/>
+            Keep your code. The chatbot core should always be yours.</p>
         </div>
         <div class="feature-item">
           <h3 class="feature-icon feature-monetization">
@@ -102,7 +110,7 @@
             <i class="fa fa-cubes" aria-hidden="true"></i>
           </h3>
           <h3>Elastic Container</h3>
-          <p>We deploy your code on container. It scales along with a traffic.</p>
+          <p>We deploy your code into docker container. It scales along with a traffic.</p>
         </div>
         <div class="feature-item">
           <h3 class="feature-icon feature-backend-free">
@@ -118,14 +126,14 @@
           </h3>
           <h3>Start lean</h3>
           <p>Start lean with zero cost.<br/>
-            Pay as you go. We offers elastic pricing plans.</p>
+            Pay as you go. We offer elastic pricing plans.</p>
         </div>
         <div class="feature-item">
           <h3 class="feature-icon feature-monetization">
             <i class="fa fa-bar-chart" aria-hidden="true"></i>
           </h3>
           <h3>Analytics</h3>
-          <p>See that how users use your chatbot.</p>
+          <p>Find out how users are using your chatbot.</p>
         </div>
     </div>
     <a href="/docs/bothub-studio/" class="btn">Learn more</a>
@@ -277,7 +285,7 @@ class OrderBot(BaseBot):
 <script src="/javascripts/scrollspy.js"></script>
 <script>hljs.initHighlightingOnLoad();</script>
 <script>
-var elem = $('article.front-promo > section');
+var elem = $('article.front-promo > #build-your-chatbot');
 elem.on('scrollSpy:enter', function() {
   var id = $(this).attr('id');
   var path = window.location.pathname + '#' + id;
