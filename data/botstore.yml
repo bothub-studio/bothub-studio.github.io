@@ -15,3 +15,15 @@ chatbots:
     channels:
       - link: https://t.me/FineParticles_Bot
         channel: telegram
+
+  - title: 파파고 번역 챗봇
+    github: https://github.com/MKtalk/papago_bot
+    medium: https://goo.gl/Jtzryq
+    icon_url: https://d3q6dk6wplpy9l.cloudfront.net/images/store/default_128.png
+    icon_alt_text: PAPAGO Bot
+    description: 네이버 파파고를 이용한 한국어 -> 영어 번역 챗봇입니다.
+    channels:
+      - link: https://t.me/NMTranslationBot
+        channel: telegram
+      - link: https://m.me/PapagoChatbot
+        channel: facebook
