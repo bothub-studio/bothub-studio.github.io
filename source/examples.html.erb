@@ -11,14 +11,29 @@ title: Store - BotHub.Studio
         <div class="project">
           <img class="store" src="<%= bot.icon_url %>" alt="<%= bot.icon_alt_text %>">
           <div class="project-desc">
-            <h1 class="title"><%= bot.title %></h1>
+            <h1 class="title"><%= bot.title %>
+            <% if bot.github %>
+              <span style="float:right">
+                <a href="<%= bot.github %>" target="_blank">
+                  <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+              </span>
+            <% end %>
+            <% if bot.medium %>
+            <span style="float:right">
+              <a href="<%= bot.medium %>" target="_blank">
+                <i class="fa fa-medium" aria-hidden="true"></i>
+              </a>&nbsp;
+            </span>
+          <% end %>
+            </h1>
             <p><%= bot.description %></p><br />
           </div>
           <div class="project-action">
             <% bot.channels.each do |channel| %>
-              <a href="<%= channel.link %>" class="btn btn-outline-primary">
+              <a href="<%= channel.link %>" class="btn btn-outline-primary" target="_blank">
                 <i class="fa fa-<%= channel.channel %>" aria-hidden="true"></i> Add
-              </a>
+              </a>&nbsp;
             <% end %>
           </div>
         </div>
