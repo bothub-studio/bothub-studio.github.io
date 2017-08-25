@@ -28,7 +28,6 @@ body > div[id=app] > header {
 }
 body > div[id=app] > header.front {
   background-color: $color-black;
-  color: black;
 }
 
 /* Text & Paragraph style */
@@ -46,12 +45,15 @@ nav.site .navbar-brand {
 nav.site .navbar-brand sup {
   font-size: 0.8rem;
 }
-nav.site ul.menu > li {
+nav.site > ul.menu > li {
   @extend %ul-no-symbol;
 }
-nav.site ul.menu > li a {
+nav.site > ul.menu > li a {
   font-size: 1.3rem;
   text-decoration: none;
+}
+nav.site a:hover {
+  @extend %transition;
 }
 nav.site > form a {
   font-size: 1.2rem;
@@ -87,7 +89,6 @@ nav.site .btn-signin:hover {
 nav.site a:hover {
   @extend %transition;
 }
-
 nav.site input.trigger {
   @media #{$mobile-and-tablet} {
     & ~ label.trigger-icon .trigger-indicator:after {

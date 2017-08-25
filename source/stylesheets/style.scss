@@ -91,7 +91,15 @@ hr {
   background-color: $color-info-background;
   border-color: $color-info-border;
 }
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebcccc;
+}
 a.disabled {
   color: $color-dark-gray !important;
   pointer-events: none;
+}
+a.link-danger {
+  color: $color-red !important;
 }
