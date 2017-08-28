@@ -1,0 +1,7 @@
+ko:
+  hello: '안녕'
+  main_copy: <em>프로그래머</em>를 위한 챗봇 호스팅 서비스
+  promo_feature_backend_title: 서버 관리에서 해방
+  promo_feature_backend_desc: 당신은 챗봇을, 서버는 우리가.<br/> 챗봇이 커질수록 더 견고한 백엔드가 필요합니다.
+  promo_feature_code_title: 코드를 쓰세요
+  promo_feature_code_desc: 수많은 클릭 대신 코드를 쓰세요.<br/> 챗봇의 핵심은 언제나 당신의 코드에 담깁니다.

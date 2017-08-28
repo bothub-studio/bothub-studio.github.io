@@ -17,6 +17,8 @@ activate :directory_indexes
 
 activate :syntax
 
+activate :i18n
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 

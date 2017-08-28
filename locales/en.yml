@@ -1,0 +1,8 @@
+en:
+  hello: "Hello"
+  main_copy: Chatbot Hosting for <em>Developers</em>
+  promo_feature_backend_title: Backend Free
+  promo_feature_backend_desc: You build bot, we build backend.<br/> You need a robust backend as bot grows.
+  promo_feature_code_title: Write Code
+  promo_feature_code_desc: Write code, not lots of click.<br/> Keep your code. The chatbot core should always be yours.
+  
