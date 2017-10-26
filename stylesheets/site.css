@@ -22,9 +22,9 @@ fieldset {
 pre {
   text-align: left; }
 
-nav.site ul.menu > li, footer.site ul, .front-promo .pricing-plans .price, section.docs aside.toc ul {
+nav.site > ul.menu > li, footer.site ul, .front-promo .pricing-plans .price, section.docs aside.toc ul {
   padding: 0; }
-  nav.site ul.menu > li li, footer.site ul li, .front-promo .pricing-plans .price li, section.docs aside.toc ul li {
+  nav.site > ul.menu > li li, footer.site ul li, .front-promo .pricing-plans .price li, section.docs aside.toc ul li {
     list-style: none; }
 
 img.disabled {
@@ -69,7 +69,7 @@ footer.site a {
           box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12); }
 
 .btn:hover,
-.btn-default:hover, nav.site > ul > li a:hover, nav.site .btn-signin:hover, nav.site a:hover {
+.btn-default:hover, nav.site a:hover, nav.site > ul > li a:hover, nav.site .btn-signin:hover {
   -webkit-transition: all 0.2s;
   transition: all 0.2s; }
 
@@ -156,9 +156,17 @@ hr {
   background-color: #d9edf7;
   border-color: #bcdff1; }
 
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebcccc; }
+
 a.disabled {
   color: #777777 !important;
   pointer-events: none; }
+
+a.link-danger {
+  color: #ff0000 !important; }
 
 /* Color */
 nav.site,
@@ -179,8 +187,7 @@ body > div[id=app] > header {
   background-color: #074f66; }
 
 body > div[id=app] > header.front {
-  background-color: #222;
-  color: black; }
+  background-color: #222; }
 
 /* Text & Paragraph style */
 nav.site .navbar-brand {
@@ -190,7 +197,7 @@ nav.site .navbar-brand {
 nav.site .navbar-brand sup {
   font-size: 0.8rem; }
 
-nav.site ul.menu > li a {
+nav.site > ul.menu > li a {
   font-size: 1.3rem;
   text-decoration: none; }
 

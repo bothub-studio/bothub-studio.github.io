@@ -30,6 +30,17 @@
     <link href="/stylesheets/site.css" rel="stylesheet" />
     <link href="/stylesheets/highlight.css" rel="stylesheet" />
     <script src="/javascripts/site.js"></script>
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('require', 'linker');
+    ga('linker:autoLink', ['bothub.studio', 'www.bothub.studio', 'app.bothub.studio']);
+    ga('create', 'UA-97211180-1', 'auto', { allowLinker: true });
+    ga('send', 'pageview');
+    </script>
   </head>
   <body>
     <div id="app">
@@ -101,7 +112,7 @@
           </h3>
           <h3>Developer toolchain</h3>
           <p>Don't leave a terminal to manage your chatbot.
-            We gives you a CLI tool.</p>
+            We give you a CLI tool.</p>
         </div>
       </div>
       <div class="features">
@@ -234,12 +245,17 @@ class OrderBot(BaseBot):
 
       </main>
       <footer class="front site">
-        <section>
+          <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.10&appId=1335312283250354";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+<section>
   <div>
-    <ul class="horizontal-menu">
-      <li><a href="/docs/">Documentation</a></li>
-      <li><a href="mailto:bothub@bothub.studio">bothub@bothub.studio</a></li>
-    </ul>
+      <div class="fb-page" data-href="https://www.facebook.com/bothub.studio/" data-tabs="about" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/bothub.studio/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/bothub.studio/">BotHub Studio</a></blockquote></div>
   </div>
   <div>
     <ul>
@@ -261,23 +277,11 @@ class OrderBot(BaseBot):
     <a href="https://github.com/bothub-studio">
       <img width="30" height="30" src="https://cdn.worldvectorlogo.com/logos/github-icon-1.svg">
     </a>
-
   </div>
 </section>
 
       </footer>
     </div>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('require', 'linker');
-    ga('linker:autoLink', ['bothub.studio', 'www.bothub.studio', 'app.bothub.studio']);
-    ga('create', 'UA-97211180-1', 'auto', { allowLinker: true });
-    ga('send', 'pageview');
-    </script>
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/python.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/languages/python.min.js"></script>

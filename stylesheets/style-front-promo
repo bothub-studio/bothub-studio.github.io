@@ -1,19 +1,20 @@
 /*
 Error: Undefined variable: "$color-accent-dark".
-        on line 4 of /mnt/c/linux/bothub-website/source/stylesheets/style-front-promo.scss
+        on line 5 of /mnt/c/linux/bothub-website/source/stylesheets/style-front-promo.scss
 
 1: /* Colors *\/
-2: .front-promo {
-3:   .code-example {
-4:     background-color: $color-accent-dark;
-5:     color: $color-white;
-6:   }
-7:   .pricing-plans {
-8:     background-color: $color-primary;
-9:     h2 {
+2: 
+3: .front-promo {
+4:   .code-example {
+5:     background-color: $color-accent-dark;
+6:     color: $color-white;
+7:   }
+8:   .pricing-plans {
+9:     background-color: $color-primary;
+10:     h2 {
 
 Backtrace:
-/mnt/c/linux/bothub-website/source/stylesheets/style-front-promo.scss:4
+/mnt/c/linux/bothub-website/source/stylesheets/style-front-promo.scss:5
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/tree/variable.rb:49:in `_perform'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/script/tree/node.rb:58:in `perform'
 /var/lib/gems/2.3.0/gems/sass-3.4.24/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -148,4 +149,4 @@ Backtrace:
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$color-accent-dark\".\A         on line 4 of /mnt/c/linux/bothub-website/source/stylesheets/style-front-promo.scss\A \A 1: /* Colors */\A 2: .front-promo {\A 3:   .code-example {\A 4:     background-color: $color-accent-dark;\A 5:     color: $color-white;\A 6:   }\A 7:   .pricing-plans {\A 8:     background-color: $color-primary;\A 9:     h2 {"; }
+  content: "Error: Undefined variable: \"$color-accent-dark\".\A         on line 5 of /mnt/c/linux/bothub-website/source/stylesheets/style-front-promo.scss\A \A 1: /* Colors */\A 2: \A 3: .front-promo {\A 4:   .code-example {\A 5:     background-color: $color-accent-dark;\A 6:     color: $color-white;\A 7:   }\A 8:   .pricing-plans {\A 9:     background-color: $color-primary;\A 10:     h2 {"; }
