@@ -81,7 +81,7 @@
 <p>or, if you are not work on <code>virtualenv</code>:</p>
 <div class="highlight"><pre class="highlight shell"><code><span class="nv">$ </span><span class="nb">sudo </span>pip install bothub-cli
 </code></pre></div>
-<p>The <code>bothub-cli</code> package works on python2 and 3 both.</p>
+<p>The <code>bothub-cli</code> package works on python2 and python3(recommended) both.</p>
 
 <h2 id="getting-started">Getting Started</h2>
 
@@ -111,6 +111,9 @@ Project name: mybot
 <div class="highlight"><pre class="highlight shell"><code><span class="nv">$ </span>bothub channel add telegram <span class="nt">--api-key</span><span class="o">=</span>&lt;my-api-key&gt;
 <span class="nv">$ </span>bothub channel add facebook <span class="nt">--app-id</span><span class="o">=</span>&lt;app-id&gt; <span class="nt">--app-secret</span><span class="o">=</span>&lt;app-secret&gt; <span class="se">\</span>
                               <span class="nt">--page-access-token</span><span class="o">=</span>&lt;page-access-token&gt;
+<span class="nv">$ </span>bothub channel add slack    <span class="nt">--client-id</span><span class="o">=</span>&lt;client-id&gt; <span class="nt">--client-secret</span><span class="o">=</span>&lt;client-secret<span class="o">)</span> <span class="se">\</span>
+                              <span class="nt">--signing-secret</span><span class="o">=</span>&lt;signing-secret&gt;
+<span class="nv">$ </span>bothub channel add kakao
 </code></pre></div>
 <p>Now, try talk to your chatbot.</p>
 
@@ -162,6 +165,7 @@ Commands:
   init       Initialize project
   logs       Show error logs
   <span class="nb">ls         </span>List projects
+  new        Create new project
   nlu        Manage project NLU integrations
   property   Manage project properties
   rm         Delete a project
@@ -174,8 +178,12 @@ Commands:
 </code></pre></div>
 <h3 id="project-management">Project management</h3>
 
-<p>Initialize project on current directory. Create an initial echo chatbot.</p>
+<p>Initialize project on current directory or new directory.
+Create an initial echo chatbot.</p>
 <div class="highlight"><pre class="highlight shell"><code><span class="nv">$ </span>bothub init
+</code></pre></div>
+<p>Or you can use new command</p>
+<div class="highlight"><pre class="highlight shell"><code><span class="nv">$ </span>bothub new
 </code></pre></div>
 <p>Clone an existing project.</p>
 <div class="highlight"><pre class="highlight shell"><code><span class="nv">$ </span>bothub clone &lt;project-name&gt;
@@ -204,6 +212,9 @@ Commands:
 <div class="highlight"><pre class="highlight shell"><code><span class="nv">$ </span>bothub channel add telegram <span class="nt">--api-key</span><span class="o">=</span>&lt;api-key&gt;
 <span class="nv">$ </span>bothub channel add facebook <span class="nt">--app-id</span><span class="o">=</span>&lt;app-id&gt; <span class="nt">--app-secret</span><span class="o">=</span>&lt;app-secret&gt;<span class="se">\</span>
                               <span class="nt">--page-access-token</span><span class="o">=</span>&lt;page-access-token&gt;
+<span class="nv">$ </span>bothub channel add slack    <span class="nt">--client-id</span><span class="o">=</span>&lt;client-id&gt; <span class="nt">--client-secret</span><span class="o">=</span>&lt;client-secret<span class="o">)</span> <span class="se">\</span>
+                              <span class="nt">--signing-secret</span><span class="o">=</span>&lt;signing-secret&gt;
+<span class="nv">$ </span>bothub channel add kakao
 </code></pre></div>
 <p>Remove a channel from current project.</p>
 <div class="highlight"><pre class="highlight shell"><code><span class="nv">$ </span>bothub channel rm &lt;channel-name&gt;

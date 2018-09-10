@@ -78,7 +78,7 @@
 <p>To install bothub:</p>
 <div class="highlight"><pre class="highlight shell"><code><span class="nv">$ </span>pip install bothub
 </code></pre></div>
-<p>The bothub package works on python2 and 3 both.</p>
+<p>The bothub package works on python2 and python3(recommended) both.</p>
 
 <h2 id="getting-started">Getting Started</h2>
 
@@ -149,8 +149,9 @@
 <li><code>add_url_button(text, url)</code>: </li>
 <li><code>add_postback_button(text, payload)</code></li>
 <li><code>add_quick_reply(text, payload=None, image_url=None)</code></li>
-<li><code>add_location_request(text)</code></li>
-<li><code>add_keyboard_button(text)</code></li>
+<li><code>add_location_request(text)</code> <sub>* Kakao, Slack is not supported.</sub></li>
+<li><code>add_keyboard_button(text)</code> <sub>* Facebook is not supported.</sub></li>
+<li><code>add_image(url, width, height)</code> <sub>* Facebook, Telegram is not supported.</sub></li>
 </ul>
 
 <h3 id="storage">Storage</h3>

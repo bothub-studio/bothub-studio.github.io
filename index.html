@@ -154,12 +154,14 @@
     <div class="container">
       <pre><code class="python">from bothub_client.bot import BaseBot
 from bothub_client.messages import Message
+from bothub_client.decorators import channel
 
 class OrderBot(BaseBot):
-   def handle_message(self, event, context):
-       message = Message(event).set_text('Nice to meet you!')\
-                               .add_quick_reply('Show menu')
-       self.send_message(message)</code></pre>
+    @channel()
+    def handle_message(self, event, context):
+        message = Message(event).set_text('Nice to meet you!')\
+                                .add_quick_reply('Show menu')
+        self.send_message(message)</code></pre>
       <div class="code-description">
         <p>Write a chatbot with BotHub.Studio SDK.</p>
         <p>You get a robust massive messaging, logging, analytic, database facilities with no additional efforts.</p>
@@ -181,10 +183,10 @@ class OrderBot(BaseBot):
           <img title="Telegram" src="https://cdn.worldvectorlogo.com/logos/telegram.svg"/>
         </li>
         <li>
-          <img title="Slack (coming soon)" class="disabled" src="https://cdn.worldvectorlogo.com/logos/slack-1.svg">
+          <img title="Slack" src="https://cdn.worldvectorlogo.com/logos/slack-1.svg">
         </li>
         <li>
-          <img title="Kakaotalk (coming soon)" class="disabled" src="https://cdn.worldvectorlogo.com/logos/kakaotalk.svg">
+          <img title="KakaoTalk" src="https://cdn.worldvectorlogo.com/logos/kakaotalk.svg">
         </li>
         <li>
           <img title="LINE (coming soon)" class="disabled" src="https://cdn.worldvectorlogo.com/logos/line-messenger.svg">
