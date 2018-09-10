@@ -122,6 +122,7 @@ Project name: mybot
 
 <span class="kn">from</span> <span class="nn">bothub_client.bot</span> <span class="kn">import</span> <span class="n">BaseBot</span>
 <span class="kn">from</span> <span class="nn">bothub_client.messages</span> <span class="kn">import</span> <span class="n">Message</span>
+<span class="kn">from</span> <span class="nn">bothub_client.decorators</span> <span class="kn">import</span> <span class="n">channel</span>
 
 <span class="k">class</span> <span class="nc">Bot</span><span class="p">(</span><span class="n">BaseBot</span><span class="p">):</span>
   <span class="s">"""Represent a Bot logic which interacts with a user.
@@ -139,7 +140,9 @@ Project name: mybot
   When you omit user_id and channel argument, it regarded as a user
   who triggered a bot.
   """</span>
-  <span class="k">def</span> <span class="nf">handle_message</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+
+  <span class="nd">@channel</span><span class="p">()</span>
+  <span class="k">def</span> <span class="nf">default_handler</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">event</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
     <span class="n">message</span> <span class="o">=</span> <span class="n">Message</span><span class="p">(</span><span class="n">event</span><span class="p">)</span><span class="o">.</span><span class="n">set_text</span><span class="p">(</span><span class="s">'You says: {}'</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">event</span><span class="p">[</span><span class="s">'content'</span><span class="p">]))</span>\
                             <span class="o">.</span><span class="n">add_quick_reply</span><span class="p">(</span><span class="s">'Yes'</span><span class="p">)</span>\
                             <span class="o">.</span><span class="n">add_quick_reply</span><span class="p">(</span><span class="s">'No'</span><span class="p">)</span>
