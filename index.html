@@ -158,7 +158,7 @@ from bothub_client.decorators import channel
 
 class OrderBot(BaseBot):
     @channel()
-    def handle_message(self, event, context):
+    def default_handler(self, event, context):
         message = Message(event).set_text('Nice to meet you!')\
                                 .add_quick_reply('Show menu')
         self.send_message(message)</code></pre>
@@ -189,7 +189,7 @@ class OrderBot(BaseBot):
           <img title="KakaoTalk" src="https://cdn.worldvectorlogo.com/logos/kakaotalk.svg">
         </li>
         <li>
-          <img title="LINE (coming soon)" class="disabled" src="https://cdn.worldvectorlogo.com/logos/line-messenger.svg">
+          <img title="LINE" src="https://cdn.worldvectorlogo.com/logos/line-messenger.svg">
         </li>
       </ul>
     </div>
